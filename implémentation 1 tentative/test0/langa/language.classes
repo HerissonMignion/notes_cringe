@@ -1,0 +1,76 @@
+
+
+static class source {
+	
+	arguments: VariableList;
+	code: InstructionList;
+	
+};
+
+
+
+class VariableList {
+	first: VariableListItem;
+};
+class VariableListItem {
+	item: Variable;
+	next: VariableListItem;
+};
+
+class Variable {
+	value: @memory;
+};
+
+
+
+class InstructionList {
+	first: InstructionListItem;
+};
+
+class InstructionListItem [
+	class InstructionZero [
+		class InstructionPrintln;
+		class InstructionLabel;
+		class InstructionGoto [] {
+			target: InstructionLabel;
+		};
+	];
+	class InstructionVariable [
+		class InstructionPushVariable;
+	] {
+		variable: Variable;
+	};
+] {
+	
+	next: InstructionListItem;
+	
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
