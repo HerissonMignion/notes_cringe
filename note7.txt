@@ -1,0 +1,310 @@
+
+
+(Il y a un saying ou une idée en théorie des groupes. Les choses qui se comportent de la même façon sont les mêmes choses).
+
+
+
+Nous avons besoin d'une représentation capable de représenter toutes les données possibles.
+Nous avons également besoin d'une représentation capable de représenter tout les systèmes possibles.
+
+
+Si je prend par exemple les listes. Il y a un seul concepte de liste : un truc auquel on peut y ajouter des éléments et en retirer. Il y a des propriétés aux liste, par exemple la longueur actuelle de la liste. 
+
+Il existe le concepte de récupérer la longueur d'une liste dont, pour chaque implémentation de représentation d'une liste, il y a un algo qui passe à travers cette représentation et nous donne la longueur de la liste.
+
+
+On peut implémenter la représentation et les algo d'un ArrayList. On peut aussi implémenter la représentation et les algo d'un LinkedList. Dans tout les cas, c'est un concepte de liste. Il y a un concepte qu'on peut ajouter des éléments à la liste. Un concepte qu'on peut retirer des éléments à la liste. Un concepte que la liste a une longueur. Un concepte que des éléments se trouvent au début ou à la fin de la liste.
+
+
+Quand j'ajoute un élément à une liste, je m'attens à ce qu'il se trouve à la fin de la liste.
+
+Quand je débug ou réfléchit à du code qui utilise une liste, quand je trace dans ma tête toute l'exécution du code, je ne rentre pas à l'intérieur de la liste. Je fais juste savoir c'est quoi le concepte d'une liste, et je peux y réfléchir. Nous pouvons réfléchir aux choses quand nous savons/comprenons le concepte de comment ils fonctionnent et comment il faut s'en servir. D'ailleur, quand on débug, on cherche la différence entre notre compréhension de comment ça fonctionne/ce qu'il devrait se passer vs ce qu'il s'est passé réellement.
+
+Quand un programme bug, ça signifie que le programme n'a pas eu la bonne propriété émergeante.
+
+Est-ce que concepte = propriété émergeante?
+Les choses qui se comportent de la même façon sont les mêmes choses.
+Penser à comment exploiter le comportement d'une propriété émergeante pour effectuer une tâche = Penser à comment utiliser les comportements d'un concepte pour effectuer une tâche.
+
+Est-ce que nous sommes capable d'appliquer de la logique et de la capacité de réfléchir, à même les propriétés émergeantes?
+
+
+
+Comment faire pour expliquer à un programmeur c'est quoi que doit accomplir le programme (la/les propriétés émergeantes du programme)? (dans la plupart des cas) on lui explique c'est quoi que le programme doit faire concrètement pour nous, pas comment le programme devra le faire. "J'ai besoin d'un programme que je lui donne une chaine de caractère et un fichier, et il me dit si cette chaine de caractères se trouve dans le fichier" (cela n'indique pas comment implémenter l'algo de recherche, ça indique juste la propriété émergeante du programme). Ça me fait penser à TDD (test driven development). D'abord on écrit les tests, ensuite on s'en va programmer cette partie du programme. Est-ce par un équivalent des tests unitaires qu'on explique à quelqu'un le concepte d'une liste ou le concete de n'importe quoi d'autre? Apprentissage par l'exemple? 
+
+
+Si c'est avec un équivalent des tests unitaires qu'on explique un concepte à quelqu'un, alors il me semble qu'il manque encore un pièce du puzzle : Il me semble que quand je réfléchis dans ma tête à un système de règles, à part pour les cas triviaux, je ne réfléchis sur du cas pas cas indiqué par les tests unitaires fournits pas la personne qui m'a expliqué le système. Il me semble que si quelqu'un m'explique le concepte d'un système en utilisant des exemples (tests unitaires), alors j'en retire un moment donné une vrai compréhension de comment le système fonctionne (sans savoir comment le système est implémenté) et je peux réfléchir à toutes situations, même celles ne figurants pas dans les tests unitaires/exemples dont j'ai eu.
+
+
+(Puisque je parle ici de tests unitaires / d'exemples, il faudrait déterminer si c'est en lien avec cet algorithme spécial qui est capable de produire un compilateur/parser uniquement avec des exemples de code.)
+
+(Y'a longtemps, j'ai regardé une vidéo sur youtube d'un gars qui parlait de tests unitaires. En gros il disant que pour s'assurer qu'une fonction n'est pas programmé avec un arbre de if-else, il faut s'assurer que la fonction remplit les mêmes propriétés que la fonction du concepte désirée.)
+
+
+Il ne faut pas oublier que, parfois, la propriété émergeante que l'on désire programmer doit remplir certaines propriétés mathématiques avec des données d'entrées ou d'autres propriétés plus compliquées. Ça signifie qu'il y a un lien entre l'explication d'un concepte en termes clairs et d'autres conceptes ou notions. 
+
+
+Ne pas oublier qu'on implémente un concepte/propriété émergeante en utilisant d'autres conceptes/propriétés émergeantes (récursivité). 
+
+
+
+
+
+Un programme est un univers. Si nous faisons un programme qui est capable de faire un programme uniquement avec une description des propriétés émergeantes, alors cette description est effectivement la description d'un univers.
+
+
+
+Description d'un concepte = description d'une propriété émergeante = tests unitaires ???
+Concepte = propriété émergeante = tests unitaires ???
+comportement = concepte = propriété émergeante = tests unitaires ???
+comportement = concepte = propriété émergeante = décrit par tests unitaires ???
+
+
+Comment décrire à quelqu'un comment fonctionne une liste?
+Comment décrire à quelqu'un comment fonctionne une file (queue)?
+Comment décrire à quelqu'un comment fonctionne un stack?
+Comment décrire à quelqu'un comment fonctionne un map?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[
+Un programmeur en train de déboguer est pareil qu'un physicist en train de chercher le problème avec sa théorie. Cependant, quand les deux arrivent enfin à la source de la différence entre leur compréhension de l'univers et comment l'univers se comporte réellement, le physicist modifie sa compréhension de l'univers alors que le programmeur modifie le comportement de l'univers.
+]
+
+```
+Alice and Bob have a shared folder.
+Alice puts a file called "photo.png" inside "/photos".
+Bob sees the file and moves it to "/tmp".
+Bob says nothing to Alice.
+
+question:
+Alice comes back later. In which folder will Alive look for the "photo.png" file?
+```
+
+Il y a une différence entre l'état objectif réel des choses, et ce que nous pensons qui est vrai sur l'état objectif réel des choses.
+
+Formulé comme ça me fait penser au processus de débogage.
+formulé comme ça fait penser moi au processus de débogage.
+
+Le système de fichier, avec la possibilité de créer, copier, déplacer, modifier, supprimer des fichiers et dossiers est un univers avec ses lois logiques.
+
+Nous avons une compréhension sur le comportement de l'univers qu'est un système de fichiers.
+
+Lorsqu'on débogue (je pense à un programme en console en début en 2e session d'école), on commence par la ligne de code qui fait le printf, et on regarde quelle variable a actuellement la mauvaise valeur au moment de l'affichage (on commencer à partir des choses que l'on voit). Ensuite, on regarde pourquoi les instructions précédantes ont mises la mauvaise valeur à l'intérieur de la variable affichée. On applique un raisonnement logique en parcourant à l'envers (et à l'endroit) l'exécution du programme jusqu'à ce qu'on trouve la différence entre notre compréhension  de ce que le programme fait et ce qu'il fait réellement. 
+
+Lorsqu'on débug un programme qui utilise des méthodes importées de d'autres bibliothèques, nous n'analysons habituellement pas le code source des méthodes importées quand nous sommes en train de le déboguer. C'est parce que nous assumons que la bibliothèque n'est pas bugué et que nous n'avons pas besoin de voir le code source pour savoir quelle concepte/propriété émergeante la méthode importée possède/remplit. Quand on débogue, nous analysons récursivement de plus en plus en profondeur l'exécution du programme. On rentre à l'intérieur d'un méthode appelée, qui appele une autre méthode alors on rentre encore à l'intérieur d'une autre méthode et ainsi de suite récursivement en profondeur. 
+
+Peut-être que, dans un langage de programmation, même les variables sont un concepte à apprendre et à comprendre. Je pourrais faire une classe Variable avec un setValue et un getValue. 
+
+// GPT-4 est maintenant capable d'utiliser des outils, c'est pareil qu'utiliser des méthodes importése de bibliothèque à la place de les programmer soi-même. 
+
+
+Nous en sommes encore à devoir décrire le comportement de, le concepte accomplit par, la/les propriétés émergeantes de, décrit par des tests unitaires d'une méthode et/ou d'une classe. Il y a un milion de façons d'implémenter un concepte d'action (méthode) ou de données (classe). Cependant, quand une méthode ou une classe est programmé, il n'y a qu'un seul concepte accomplit par la méthode ou la classe. Puisque nous sommes capable d'utiliser des méthodes et des classes provenant bibliothèques, sans avoir à connaître leur code source, cela signifie que c'est directment sur les concepte/propriétés émergeantes que nous réfléchissons, et non pas sur l'implémentation. Le travail de "reverse engineering" consiste à déterminer les conceptes/propriétés émergeantes à partir du code source. 
+
+Puisque c'est sur les conceptes/propriétés émergeantes/comportement/décrit-par-les-tests-unitaires que nous réfléchissons, alors nous devons programmer une façon de façon de parler d'un concepte/propriété émergeante avec du code.
+
+Puisqu'un concepte/propriété émergeante est lui-même un concepte abstrait, alors il y a une infinité de façon de l'implémenter. La façon dont nous allons l'implémenter ne sera pas parfaite, et les algorithmes que nous allons programmer (par exemple réfléchir sur comment programmer une propriété émergeante en utilisant d'autres propriétés émergeantes) vont traverser récursivement cette implémentation/représentation imparfaite, mais c'est pas grave parce que c'est le fonctionnement/la propriété émergeante des algorithmes qui compte. 
+
+
+Alors, de quoi avons-nous besoin pour représenter tout les conceptes de données (classes) possible?
+Alors, de quoi avons-nous besoin pour représenter tout les conceptes d'actions (méthodes) possible?
+Important de ne pas oublier que ces représentations Ne sont fondamentalement PAS du code source et n'ont rien en commun avec du code source concernant ce qu'ils décrivent. Pour les actions/méthodes, il faut représenter tout les effets possibles que peuvent avoir toutes les actions/méthodes possibles. 
+
+Pour les conceptes de données (classes), je pense qu'un truc qui ressemble aux disgramme de relation dans les bases de données serait une bonne idée. (relations 1 à 1, 1 à plusieurs, plusieurs à plusieurs, ...).
+
+Pour les méthodes, peut-être un truc qui représente le déplacement de l'information dans les structures des données (classes) concernées. Peut-être aussi une façon d'indiquer que avant et après, l'information remplit des propriétés qui peuvent être mathématiques. Après tous, trier une liste ou un tableau en ordre croissant fera en sorte que après l'opération, les données et leurs emplacement rempliront des propriétés d'êtres plus grande ou plus petite que d'autres. Pour trouver le maximum d'une liste ou d'un tableau, la donnée qui sera trouvé aura la prorpiété mathématique d'être la plus grande de toute la liste/tableau. (Puisqu'il est possible d'avoir à implémenter une représentation des nombres et des opérations mathématiques, est-ce possible qu'il faille permettre d'appeler un autre action (méthode) qui, appelée, retourne une valeur indiquant si la proprété mathématique est remplit? Peut-être que non parce que les nombres et les comparaison "est plus grand que" et "est plus petit que" sont eux-même des conceptes. Alors pour parler qu'un méthode a la propriété d'ordonner tout les membres d'une liste/tableau, il suffirait juste d'invoquer plusieurs autres conceptes. Jamais nécessaire de référencer une implémentation?).
+
+
+Je reprend mes mots pour : "Pour les actions/méthodes, il faut représenter tout les effets possibles que peuvent avoir tout les actions/méthodes possibles".
+Je reprend l'exemple de mettre un tableau en ordre croissant. Il y a plusieurs algorithme pour implémenter le tri, peut importe l'implémentation, l'effet du tri sera le même : il n'y a qu'un résultat possible du tri (sauf petits détails comme 2 valeurs identiques). Mais il y a également d'autres subtilités possibles : est-ce qu'on tri le tableau sur place? Est-ce que notre fonction crée un nouveau tableau de même taille, et y place les objets en ordre dans ce nouveau tableau, faisant ainsi en mémoire deux tableau différent qui ont les références aux mêmes objets. Est-ce que notre fonction crée un nouveau tableau de même taille, et y place les index où trouver, en ordre croissant, les éléments dans le tableau original qui reste en désordre? 
+
+Sous ce point de vue, il semble y avoir une importance avec comment aller chercher l'information, comment l'action/méthode a déplacé/copié l'information. Les effets de l'exécution d'une action/méthode concernent où l'information a été copiée/déplacée (chemin pour aller chercher les choses) ainsi que les propriétés émergeantes/conceptes auxquelles certaines informations répondent/remplissent (ex : "ce nombre est la sommes de ces deux là.", "ce nombre est le plus grand du tableau."). 
+
+
+Tout les langages de programmation (sérieux) essayent d'être pratique à utiliser. Pour cette raison, ils ont tous built-in la capaciter de représenter les nombres et de faire les opérations mathématiques de bases dessus. Cependant, moi j'ai créé un langage/environnement de programmation où les nombres ne sont pas built-in, il faut les programmer soi-même. Quand nous voulons faire un programme, nous avons en tête le concepte du programme à réaliser. Au fûr et à mesure qu'on approfondit récursivement comment nous allons implémenter le programme, nous allons arriver à utiliser des nombres. Les nombres sont à leur tour un concepte qui est à implémenter. Si on utilisait mon langage/environnement, il faudrait aller programmer/implémenter une classe nombre qui possède des décimales. Ensuite il faudrait aller programmer les opérations mathématiques de bases comme + - * / et la comparaison de deux nombres. 
+
+
+
+Si ce sont sur les conceptes/propriétés émergeantes que nous réfléchissons, alors comment faire un algorithme qui détermine toutes les façon possible (une infinité) d'implémenter un concepte/propriété émergeante? Puisqu'il y a une infinité de façons, il faudrait lister seulement les façons/implémentations qui sont les "meilleur", "mieux" programmés (ex: appeler d'autres méthodes utilitaires déjà programmés, ou à l'opposé tout reprogrammer au complet à chaque fois, ou un mixte entre single source of truth et appeler d'autres méthodes utilitaires déjà programmés et minimiser la quantité de lignes de code dans chaque méthodes, ...). Mais comment on réfléchit?
+
+(
+Comment se mettre à programmer une méthode de toute pièce? Penser en tutorat, la fille que j'ai aidé pendant 2 heures à programmer le connect-4. Comment j'ai planifié la méthode qui ajoute un jeton dans un colonne et qui return si un jeton a été ajouté à la colonne.
+)
+
+
+Exemple où on réfléchit :
+Je désire trouver le nombre le plus grand dans une liste (le maximum). J'ai déjà programmé une méthode pour mettre la liste en ordre croissant. Je sais qu'une propriété émergeante d'une liste trié est que le nombre le plus grand va se trouver à la fin de la liste. Alors, pour avoir le nombre le plus grand, je fait trier la liste et je récupère le dernier élément. 
+
+
+
+// il serait possible un moment donné qu'au lieu d'avoir à systèmatiquement écrire du code, que ce soit par un humain ou ce programme, que ce programme interprète et exécute ce qu'on lui dit de faire. Au lieu que ce programme doit comprendre les conceptes qu'on lui dit de programmer en javascript, qu'il comprenne les concepte et les exécutes sur le champ. Le temps d'exécution serait plus lent à long terme, mais ça illustre que l'objectif de ce programme n'est pas obligatoirement la création d'une code base. Le programme va programmer le concepte seulement si on lui demande de le programmer. si on lui demande d'occuper la fonction/rôle de calculer le concepte, pas besoin de le programmer. 
+
+//Ainsi, on peux lui donner une liste de nombre et lui demander le maximum. Ou on peut lui donner une liste de nombre et il va faire un programme qui va trouver le maximum dans cette liste. 
+
+
+
+On parle avec le programme avec un ou plusieurs langages. Le programme pourrait être seulement capable de générer des fichiers (ce qui lui permet de faire d'autres programmes), pourrait être seulement capable d'utiliser des api mais ne peut faire écrire de fichiers (ce qui lui permet de faire les tâches lui-même, mais il ne peut pas automatiser/déléguer), ou le programme peut générer des fichiers et utiliser des api. La capacité de réfléchir ne dépend pas beaucoup de ce qui est À faire (appeler soi-même les api, ou faire soi-même des programmes qui feront ces appels). Avec le langage, on indique au programme ce qui doit être fait (est-ce qu'il doit faire lui-même les appels aux api, est-ce qu'il doit faire lui-même des programmes qui feront ces appels (ainsi que dans quel langage), est-ce qu'il doit calculer le résultat d'une formule, est-ce qu'il doit faire un programme qui calculera le résultat d'une formule, ...).
+
+"calcule la réponse de [une formule]".
+"fait un programme qui calcule la réponse de [une formule]".
+
+Je peux calculer une addition entre deux nombres. Le programme pourra calculer une addition entre deux nombres. Je peux dire à quelqu'un de faire l'addition de deux nombres. Le programme pourra dire à quelqu'un (un humain ou un ordi (en lui faisant un programme)) de faire l'addition de deux nombres. Tout comme les humains ont différents langages pour communiquer, certains environnemnts d'exécution (le javascript de browser, le javascript de nodejs, le java de la jvm, ...) ont différents langages pour leur dire quoi faire. Le programme, s'il doit générer une liste d'étapes, doit traduire ça en langage de programmation pour que ça puisse rouler dans un environnement d'exécution, ou doit traduire ça en langage du shell que la personne utilise pour communiquer avec le programme. La situation N'est PAS asymétrique entre générer une liste d'étapes pour l'ordi et générer une liste d'étapes pour l'humain qui communique avec le programme. Si je dis à quelqu'un de faire un certain calcule mathématique, et qu'il me répond "je ne sais pas comment calculer une racine carrée", alors je vais lui expliquer comment calculer une racine carrée. Si le programme fait du javascript, et que nodejs répond "Uncaught ReferenceError: sqrt is not defined", alors le programme devra lui expliquer comment calculer une racine carrée. J'aimerais que le programme ait une base de connaissance et qu'on puisse juste lui ajouter des connaissance manuellement en allant rajouter des données, mais peut-être qu'on devrait pouvoir lui expliquer les étapes pour faire quelque chose (capacité d'apprendre par le langage). 
+
+Si la situation où l'utilisateur communique avec le Programme et où le Programme communique avec un environnement d'exécution est symétrique, alors il y a peut-être différents types de demandes. Car on peut demander au Programme de faire quelque chose, et le programme peut nous répondre qu'il y a contradiction ou qu'il n'a pas compris. Et pareil pour l'environnement d'exécution. 
+
+Le Programme se fera commander qu'est-ce qu'il doit faire. Nous pourrions lui dire de réfléchir à comment faire une tâche et la faire. Ou on lui dit de réfléchir à comment faire une tâche et de nous dire les étapes à faire. Ou on lui dit de réfléchir à comment faire une tâche et de dire à nodejs les étapes à faire. Ou on lui dit de prendre des étapes en javascript et de les traduires en étapes en java. Ou on lui dit de prendre des étapes écrite dans notre langage du shell (le shell a son langage pour communiquer avec le Programme) et de les traduires en javascript (là il ne réfléchit pas). Ou on lui indique deux conceptes et on lui demande de faire de l'abstraction. 
+
+Ce que je souhaite faire c'est un programme qui a approximativement la capacité de réfléchir et de comprendre des choses. Peut-être que je suis en train d'élaborer un programme plus grand que juste ça. Nous avons la capacité de faire plusieurs choses dont nous n'avons pas encore réussi à programmer. Ce programme aurait les mêmes capacité. Ce programme aurait besoin d'un langage qui permet de lui indiquer quoi faire, avec la même flexibilité de choses possible que nous pouvons faire nous aussi dans nos têtes. 
+
+Certaines choses/capacités que j'ai peut-être trouvé qu'il faut programmer :
+- capacité de réfléchir à des choses abstraites (penser et simuler les choses suivantes sans avoir d'implémentation : concepte de liste, trouver le maximum d'une liste, calcul racine carrée).
+- phase d'optimisation du compilateur.
+- capacité de faire de l'abstraction ((trouver des choses en commun entre des conceptes?), (trouver comment faire la même chose dans un autre environnement?)).
+
+// c'est l'abstraction qui donne de la signification aux mots.
+
+- (mes expériences de pensées ne m'ont pas encore apportés là, mais il me semble que nous sommes capables de nous faire des mises en situations dans nos têtes). 
+- (j'ai pas encore pensée à où est situé la mémoire de travail). 
+- (j'ai encore aucune idée de comment faire un programme qui peut faire un compilateur uniquement avec des exemples de code). 
+
+
+
+// Peut-être que le fait que certaines actions sont faites après d'autres actions (dans le temps) est en soi un concepte tout comme les nombres. Peut-être aussi que les nombres naturels sont simplement le concepte de la répétition de "récupérer le prochain" un certain nombre de fois. 
+
+
+Un problème récurrent semble me revenir en tête à chaque fois que je pense à comment communiquer au Programme c'est quoi qu'on veut qu'il fasse : l'exactitude de ce qu'on veut qu'il fasse, l'exactitude de la sémentique. Est-ce possible de faire un langage où il est toujours possible d'exprimmer avec aucune ambiguïté possible c'est quoi qu'on veut qu'il fasse? Si la réponse est non, peut-être que pour certains langages (ou certains types de langages), il est obligatoire d'interpréter au moins un peu les liens entre les choses expliquées/demandées. 
+
+
+Mises en situation/Expériences simulées dans nos têtes:
+Il me semble que nous sommes capable de faire des mises en situations. Des situations où on se dit "si on admet que [truc à admettre comme vrai], alors ...". Ou des situations où on se dit "imaginons que nous avons 3 listes a b c, maintenant ajoute 3 dans la liste a. ajoute 4 dans la liste b, ...". Il me semble aussi qu'on peut faire une mise en situation alors que nous sommes déjà à l'intérieur d'une mise en situation. Il me semble que des situations où je fais des mise en situation sont quand je programme un truc et que je simule dans ma tête l'exécution du code pour des edge case, ou quand je suis en train de déboguer. Il me semble aussi que le but de faire une mise en situation est d'en analyser les résultats ou quelque chose d'autre dedans, le but n'est pas de gaspiller notre énergie mentale donc ça sert à quelque chose. 
+
+
+Si un prof explique des choses à la classe, que la plupart du temps le prof dit des choses qui sont objectivement vrai/véritable, mais qu'une fois de temps en temps, il se trompe et dit un truc faux, habituellement nous sommes capable de déterminer que le prof s'est trompé en réfléchissant et en concluant que le prof semble s'être trompé sur un point. S'il y a dans "la base de données des connaissances" du Programme quelques erreurs, alors le Programme devrait être capable de trouver les erreurs dans sa knowledge base (ou ailleur de la knowledge base) et de corriger les erreurs. Probablement un procédé en lien avec la cohérence des truc vrai/logique/véritable/etc. 
+
+
+
+
+
+
+
+
+Les problèmes de permutations.
+	Échanger une valeur entre deux variables.
+	Résolution du rubik's cube.
+Pour résoudre un rubik's cube, on a séparé sa résolution en plusieurs étapes : couronne inférieurs, 2 premier étages, couronne supérieur, face supérieurs, permute last layer (avec variations). Ensuite, chacune de ces étapes a plusieurs formules qu'on peut utiliser pour la résoudre. 
+Pour inventer une méthode de résolution du rubik's cube, on procède de la même façon que pour programmer une longue tâche complexe. On sépare la tâche en plus petites tâches (concepte de truc à faire, méthode, action) plus petites et plus simples à réaliser. Ces plus petites tâches sont elles-mêmes réaliser avec encode d'autres plus petites tâches (concepte de truc à faire, méthode, action). Cela continue récursivement jusqu'à ce qu'on arrive aux instructions/actions de bases.
+
+Alors résoudre un rubik's cube peut ce faire plus ou moins par brute force.
+
+Échanger entre deux variables les valeurs qu'elles contiennent est aussi un problème de permutation dont je pense qu'il est résolu par le même algorithme. Cependant cette situation se résoud souvant par la création d'une nouvelle variable, une instruction/action de base qui n'est pas disponible quand on résoud un rubik's cube. 
+
+Brute force VS (planning?)
+Pour résoudre un rubik's cube précit, on peut brute force toutes les combinaisons de mouvements possible jusqu'à ce qu'on tombe sur une combo qui résoud le cube. On peut aussi planifier une méthode générale qui fonctionne toujours, peut résoudre tout les cubes, et pas juste celui qu'on a présentement, et ensuite on l'applique à notre rubik's cube actuel. 
+
+Si on dit au Programme "voici le concepte d'un rubik's cube et la représentation d'un rubik's cube sur laquelle tu devra opérer. Fait un algorithme capable de résoudre les rubik's cubes.", le Programme peut séparer la résolution en plusieurs conceptes d'"étape"/état du rubik's cube à travers lesquelles passer. Ensuite il fait plusieurs conceptes de choses à faire (méthode/action) qui seront peut-être à être utilisé pour ammener le cube d'une étape à l'autre. 
+
+(vite vite, cela me fait penser aux stratégies de (re?)normalisation dans les speedrun blind). 
+
+
+
+
+
+
+Essayer de faire un langage de programmation des conceptes. 
+```
+Un livre a un titre, un auteur, une liste de pages.
+Une page a une liste de mots et un numéro de page. Le numéro d'une page est la position de la page dans la liste des pages du livre dans lequelle elle se trouve.
+
+// Fait une méthode qu'on lui donne un livre et un mot, et la méthode indique toutes les pages où ce mot se trouve.
+
+Pour trouver les pages d'un livre qui contiennent un mot : {
+	Parcours toutes les pages du livre : {
+		//innocent jusqu'à preuve du contraire. 
+		Si la liste des mots de la page contient le mot recherché : {
+			indique la page actuelle. // ici "indique" a une sémantique intéressante.
+		}
+	}
+}
+
+```
+
+
+
+
+
+Langues humaines, langues des conceptes?
+
+Pourquoi suis-je capable de réfléchir à une liste et comment fonctionne l'utilisation d'une liste sans avoir en ma possèssion une implémentation d'une liste? Les choses abstraites ne peuvent pas être, elles peuvent seulement être représentés, implémenté, mais je suis capable de réfléchir aux comportements/propriétés émergeantes d'une liste abstraites sans avoir de telles implémentation, alors comment? Et bien ce sont les tests unitaires. Les tests unitaires décrivent comment les choses fonctionnent sans les implémenter.
+
+J'explique souvant le concepte d'une liste par un exemple du genre : "Une liste, c'est quelque chose dont on peut y ajouter des éléments. On peut aussi récupérer les éléments dans l'ordre inverse dont ils y ont étés ajoutés. Une liste préserve l'ordre dans lequel les éléments ont étés ajoutés.". Ce que ces phrases en français exprimment, ce sont des tests unitaires. Dans ces quelques phrases en français, j'exprime les conceptes des actions à faire sur une liste. 
+
+Pour un concepte, il y a toujours une infinité de façon de l'implémenter. Pour les tests unitaires c'est un peu l'inverse. IMPORTANT : Il y a probablement plusieurs/une infinité de façon de décrire un concepte (une infinité de [groupe de tests unitaires]) qui peuvent décrire le même concepte. 
+
+Un problème potentiel à utiliser des tests unitaires pour décrire des conceptes est qu'il semble être difficile de s'assurer qu'une implémentation n'est pas juste un arbre de if-else à l'intérieur. Je fais la remarque qu'en décrivant le comportement/les propriétés émergeantes d'une liste, je fais une description très générale, comme si ces quelques phrases permettaient ensuite de faire une infinité de tests unitaires. Comme si c'était une description générale du traitement/déplacement de l'information, peut importe l'état dans lequel se trouve actuellement une liste.
+
+Alors : Inventer un langage de description générale du comportement de quoi que ce soit (pouvant optionnellement utiliser d'autres conceptes, ou des propriétés (mathématiques ou autres) des choses concernées).
+
+Il y a conceptes d'états et conceptes d'actions? Une liste, c'est un concepte d'état avec plusieurs conceptes d'actions à faire sur la liste. 
+
+Des tests unitaires, c'est des mises en situations, non? 
+Comme d'habitude : essayer de faire un langage pour exprimmer des mises en situations.
+Ensuite : essayer de trouver comment faire un algorithme qui peut prendre un concepte décrit par des mises en situations et qui trouve comment implémenter cela dans un environnement/système/langage, possiblement en utilisant d'autres conceptes, et ainsi de suite récursivement. 
+
+En ce qui ceoncerne le problème de faire un algorithme qui prend en entré un concepte à implémenter et un environnement/langage/système, et qui donne en sortie une implémentation dans cet environement/langage/système, il me faut actuellement une autre chose : déterminer/découvrir une façon d'implémenter/représenter l'information qu'un tel algorithme a besoin. Trouver une façon d'implémenter/représenter avec le strict minimum d'information un concepte, de tel façon qu'un être humain connaissant comment fonctionne cette représentation puisse réfléchir à un truc écrit et se dire "Ça c'est le concepte d'une liste" ou "Ça c'est le concepte d'un stack". 
+
+Pour essayer d'arriver à faire cela (faire en même temps une représentation de l'information minimum (tests unitaires) nécessaire à décrire (de façon identifiable) un concepte ET un algorithme qui prend une description d'un concepte et fait une implémentation dans un environnement/langage/système indiqué), je peux d'abord procéder à des situations simples. Par exemple: dans un environnement/langage où il y a des variables, si je lui indique d'implémenter le concepte d'une variable, alors il devrait trouver comment implémenter cela avec les instructions de base du système/environnement/langage. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

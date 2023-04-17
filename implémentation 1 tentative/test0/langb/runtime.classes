@@ -1,0 +1,28 @@
+
+
+
+static class ram {
+	
+	current: InstructionListItem;
+	
+	
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

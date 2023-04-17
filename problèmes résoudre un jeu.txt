@@ -1,0 +1,22 @@
+
+
+Il semble qu'il est difficile de programmer un bot pour être bon à advence wars. Un bot qui soit aussi bon que les meilleurs joueurs de advence wars by web.
+
+
+J'ai un autre jeu dont il serait intéressant d'essayer d'automatiser sa résolution. Je pense qu'ensuite on pourrait étendre un algo de résolution de ce jeu pour qu'il marche avec advence wars aussi.
+
+Ce jeu c'est le jeu où il y a 3 stack d'anneau de différentes tailles en bordel, et il faut trier les anneaux uniquement en utilisant les opérations sur les stacks. 
+
+Un tel jeu, il faut prendre les meilleurs décision d'actions à faire.
+
+Il y a à chaque instant une liste d'actions qu'on peut piger dedans. 
+
+
+
+
+
+
+
+
+
+

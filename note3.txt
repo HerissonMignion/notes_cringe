@@ -1,0 +1,344 @@
+
+(ce fichier a une très longue introduction, qui se termine à la deuxième paire de "/!\ /!\ /!\")
+
+
+
+/!\ /!\ /!\
+
+
+Ce fichier est une tantative de "décortiquer" plus ou moins ce que j'essaye d'accomplir dans la mise en situation que voici :
+
+
+IMPORTANT {
+
+Ma tête a toute les propriétés émergeante dont je cherche à programmer. Ma tête existe physiquement dans l'univers, pour cette raison, je pense qu'il est possible de faire un programme capable de réfléchir, d'être conscient, de comprendre, etc... . Les nombres (en mathématique) sont des choses abstraites mais nous pouvons représenter ces choses sans implémenter dans les lois physique de l'univers une calculatrice numérique qui opère sur ces représentations. Le concepte de ce qu'une méthode doit accomplir, c'est abstrait, et ça existe dans ma tête, encodés dans les atomes et les électrons. Tout comme les nombres, on peut utiliser une implémentation physique pour représenter d'autres choses abstraites (le concepte qu'une méthode/fonction doit accomplir). (J'imagine dans ma tête une signature de fonction qui prend en paramètre une liste et qui retourne un nombre. Et je dessine des flèches entre les paramètres/retour de la fonction avec des indications minimales sur le travail à accomplir).
+
+Dans cette situations/mise en situation, il y a une liste de «choses» (paramètre en entré et truc retourné ne sont peut-être pas différent) et le concepte définit (que la fonction/méthode doit accomplir) : [ (entre les paramètres et le retour) que le paramètre (une liste) a une propriété qui est une quantité et qu'il faut trouver cette valeur. (Nous cherchons à programmer la méthode count/length sur une liste). ].
+
+Cependant voici une contraite : la liste n'as pas de propriété/attribut ou méthode/fonction pour récupérer cette "quantité" (le nombre d'éléments). (La bonne chose à faire serait d'améliorer la classe ChainList pour que les méthodes Add et Remove conservent un compte du nombre d'élément, cependant ceci est un exemple où on retrace la logique qui permet d'écrire la méthode count, ici le "concepte" N'est PAS de réécrire la classe. Le concepte est de calculer le nombre d'éléments dans la liste.)
+
+Nous avons à notre disposition les outils suivants : créer des variables. Oppérations mathématiques élémentaires et stoquer des résultats dans des variables. Exécuter un morceau de code autant de fois que cette quantité qu'on cherche grâce à un foreach.
+
+Nous avons également les connaissances suivantes : Faire une multiplication c'est la même chose que faire une addition répété. 1 * 4 = 1 + 1 + 1 + 1.
+
+Dans notre situation: Nous n'avons pas accès au nombre que l'on cherche, mais nous pouvons répété du code autant de fois que ce nombre.
+int countAmountOfItems(List<Object> list) {
+	int rep = 0;
+	//le block de code suivant s'exécute autant de fois qu'il y a d'éléments
+	//dans la liste. on compte +1 pour chaques éléments.
+	foreach (Object item in list) {
+		rep += 1;
+	}
+	return rep;
+}
+
+
+ou bien aussi :
+
+//techniquement on peut le simplifier en une seule classe, mais cela démontre le point j'espère.
+//un ChainListElement existe seulement s'il contient un élément pour la liste.
+class ChainList {
+	
+	private ChainListElement root = null;
+	
+	public int count() {	
+		if (this.root != null) {
+			return this.root.count();
+		}
+		return 0;
+	}
+	
+}
+
+class ChainListElement {
+	
+	public ChainListElement next = null;
+	public Object value = null; //valeur stocké à cet endroit de la liste
+	
+	public int count() {
+		int rep = 1;
+		if (this.next != null) {
+			rep += 1; // rep++;
+		}
+		return rep;
+	}
+	
+}
+
+ou bien encore :
+
+class ChainList {
+	
+	private ChainListElement root = null;
+	
+	public int count() {
+		int rep = 0;
+		ChainListElement current = this.root;
+		while (current != null) {
+			rep += 1; // rep++;
+			current = current.next;
+		}
+		return rep;
+	}
+	
+}
+class ChainListElement {
+	
+	public ChainListElement next = null;
+	public Object value = null; //valeur stocké à cet endroit de la liste
+	
+}
+
+Ce qu'on appele la signature d'une méthode/fonction est concrètement un gros % du concepte de la méthode/fonction, sans les "explication?" de comment la méthode/fonction fait.
+
+Un programme aussi est une méthode/fonction qui accomplit un concepte, donc qui a une "signature".
+
+} IMPORTANT
+
+/!\ /!\ /!\
+
+
+
+
+
+La description des actions qu'une fonction/méthode effectue (les instructions, les lignes de codes) ce sont des verbes à l'infinitif. Des descriptions d'actions. Il y a aussi des descriptions d'états (verbes d'états).
+
+
+
+
+============
+
+"""
+Cependant voici une contraite : la liste n'as pas de propriété/attribut ou méthode/fonction pour récupérer cette "quantité" (le nombre d'éléments). (La bonne chose à faire serait d'améliorer la classe ChainList pour que les méthodes Add et Remove conservent un compte du nombre d'élément, cependant ceci est un exemple où on retrace la logique qui permet d'écrire la méthode count, ici le "concepte" N'est PAS de réécrire la classe. Le concepte est de calculer le nombre d'éléments dans la liste.)
+"""
+
+"""
+la liste n'as pas de propriété/attribut ou méthode/fonction pour récupérer cette "quantité" (le nombre d'éléments).
+"""
+
+//le "of" a la même signification qu'en vb.net
+
+(la liste).n'a pas([
+	of Attribut,
+	of Méthode
+])
+capable of {
+	retourner (la liste).number of Element;
+};
+
+
+============
+
+Nous avons nous-même inventés, dans nos têtes le concepte de "liste" qui peut "contenir" des choses. Qu'on peut ajouter des choses dans une "liste". Une "liste" est un concepte dont on peut y "ajouter", lui "retirer" et qui peut "contenir". Avoir avoir inventés dans nos têtes le concepte de "liste", nous nous en servons dans le langage. 
+
+
+Si ce que j'appele un "concepte" est concrètement une class ou une interface en c# ou en java, est ce que beaucoup de choses sont des class/interface en réalité? Et qu'en plus ils sont utilisable dans le langage par la suite? 
+
+
+============
+
+"""
+Nous avons à notre disposition les outils suivants : créer des variables. Oppérations mathématiques élémentaires et stoquer des résultats dans des variables. Exécuter un morceau de code autant de fois que cette quantité qu'on cherche grâce à un foreach.
+"""
+
+"""
+Nous avons à notre disposition les outils suivants : [
+	créer des variables,
+	...oppérations mathématiques élémentaires sur des quantités,
+	stoquer des résultats dans des variables,
+	exécuter un morceau de code autant de fois que (la quantité qu'on cherche) (grâce à un foreach)
+].
+"""
+
+============
+
+
+============
+"""
+Nous avons également les connaissances suivantes : Faire une multiplication c'est la même chose que faire une addition répété. 1 * 4 = 1 + 1 + 1 + 1.
+"""
+
+Les "quantités" sont un concepte inventé dans nos têtes, mais ont un impacte sur les features du langage? : un concepte inventé (les quantités) peut affecter l'exécution (les boucles) de "code".
+
+{
+	Quantity one = (Quantity)1;
+	Quantity four = (Quantity)4;
+}
+
+Integer extends Quantity;
+Quantity multiply(Integer, Integer);
+Quantity add(Integer, Integer);
+
+(to do multiply(x extends Integer, y extends Integer) returns Integer == to do {
+	dim Quantity rep = (cast Quantity 0);
+	asmuchas (y) {
+		set rep = (add(x, y));
+	}
+	return (rep);
+})
+
+
+"""
+Multiplier par 1 donne le même résultat.
+"""
+
+(to multiply(1, x extends Integer) return Integer == to x)
+
+
+
+to (expression considéré)
+to { block de code considéré }
+
+
+Un statement c'est une action/instruction.
+Une expression c'est une action qui retourne une valeur.
+
+do (add(sub(x, 1), 1);
+
+
+
+
+============
+
+
+
+
+
+
+
+
+
+
+
+
+//pour déclarer une méthode, on peut énoncer cela comme un fait :
+fact (to main() == to do {
+	console.log("hello world");
+});
+
+fact equals
+(to (main()))
+(to {
+	console.log("hello world");
+});
+
+//un do c'est du code à exécuter
+do {
+	do (main());
+};
+
+
+Si on serait en train d'expliquer un programme à quelqu'un, il nous arriverait de dire "lorsque ... alors fait ceci ... fait cela ..."
+
+when having to do (main()) then do {
+	do (console.log("hello world"));
+};
+
+when doing (main()) then do {
+	do (console.log("hello world"));
+};
+
+
+
+
+
+
+
+
+
+
+
+
+On devra implémenter dans le langage des "représentations". Une façon d'écrire un littérale d'objet spécifique à un type fabriqué par nous directement dans le source code, et y associer du code pour lire cette représentation. il serait également utile de pouvoir faire du code pour généré une représentation. Peut-être utiliser les strings comme médium de représentation.
+
+set asdf = (bool "true"); //le do à droite du = est implicite.
+set asdf2 = (int "1234");
+
+//pouvons-nous faire une syntaxe pour définir le "asmuchas" (int ici)? Chaque statement du langage commence par son propre keywork réservé, il faudrait que le langage puisse définir de nouveau keywork avec quels "types de cossins" reçevoir avant le ;.
+
+
+define [do {code}] as {
+	do code; //un appel récursif défini le do.
+};
+
+
+//peut-être qu'il y aura un stack d'évaluation.
+
+//considérant que Integer c'est une classe inventé, définir une instruction d'addition?
+//pour l'utiliser: add int "2134" int "1234"; l'appeler met déjà sur le stack deux int
+define [add x: Integer y: Integer : Integer] as {
+	//on appele l'addition des deux nombres. les deux nombre sont déjà sur le stack.
+};
+
+//on défini le 'int "1234"'
+define [int digits: String] as {
+	//en nous utilisant, le string figure sur le stack.
+	//code qui met un objet Integer sur le stack.
+};
+
+
+
+Plus tard, il sera possible de faire un define pour avoir un while true.
+Exemple:
+```
+whiletrue {
+	//code
+};
+```
+le stack va avoir besoin de goto et de label.
+on pourrait peut-être faire un sorte que le break est un goto vers un label prédéfini.
+
+
+
+
+Si une action (ajouter, retirer, stoquer dans une variable) est une concepte, alors on pourrait faire en sorte que les instructions aussi sont des conceptes (class).
+
+class Instruction {
+	
+	
+	Instruction next;
+}
+
+
+class ListElement {
+	Object value;
+	ListElement next;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

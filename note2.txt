@@ -1,0 +1,488 @@
+
+[En se basant sur l'idée que la phase d'optimisation d'un compilateur et ce que nous avons programmé qui ressemble le plus à la capacité de réfléchir d'un être humain.]
+
+
+pensée rationnelle = capacité de réfléchir.
+
+
+Quand on se fait dire un texte difficile à comprendre, dont il y a certains mots dont nous hésitons à comprendre leur signification (parmis plusieurs significations possibles pour certains mots), on est capable d'utiliser de la pensée rationnelle pour déterminer la significations utilisé de certains mots. Cela signifie que la phase du linker de l'analyse sémentique de ce qu'on se fait dire peut utiliser la pensée rationnelle pour déterminer la signification des mots. Si le texte est écrit et que le papier est déchiré en plusieurs morceau, alors on peut utiliser la pensée rationnelle pour remettre les morceaux dans un ordre où la syntaxe de la phrase est correcte. Donc il est possible d'utiliser la pensée rationnelle pour l'analyse de la syntaxe d'une phrase.
+
+Le processus de compilation génère des pensées objectifiées en mémoire. La pensée rationnelle, qui est un processus fonctionnant avec des objets de même type (je pense) en mémoire est capable d'asister la compilation qui génère elle-même des objets en mémoire.
+
+On peut se faire expliquer comment interpréter un langage basé sur des symboles consécutifs et notre compiler nous explique.
+
+
+
+Il y a probablement une infinité de façon de représenter un raisonnement humain dans notre tête. est-ce que l'architecture en mémoire est similaire à la syntaxe du langage humain qu'on a apprit? Mais on peut apprendre plusieurs langage humains. Moi je connais le français et l'anglais, et il m'arrive parfois d'utiliser des mots en anglais au milieu d'une phrase majoritairement en français, et ces mots ne sont pas toujours de simples noms communs en anglais, ce sont parfois des jetons syntaxiques importants au milieu d'une phrase en français, alors probablement que le langage ne ~fassone pas la représentation des pensées humaine dans notre mémoire, qu'un langage humain est simplement une représentation possible des ces pensées. Je pense qu'apprendre plusieurs langages humains n'affecte pas vraiment notre intelligence, alors un langage humain c'est vraiment juste une façon quelconque d'éparpiller des pensées humaines en textes ou en sons?
+
+
+
+Quand nous apprenons des choses, nous pouvons utiliser la pensée rationnelle au début pour suivre les instructions/choses que nous avons apprises. Donc quand on vient d'apprendre quelque chose, au début il y a un certain temps où nous devons continuer de réfléchir très conscientment pour agir selon ce qu'on a aprit. Mais il y a un moment où ça fait "assez de fois" qu'on fait la même tâche, qu'on est "habitué", et qu'on se met à faire la même chose de façon automatique, sans vraiment réfléchir.
+C'est une grosse spéculation mais voilà: un programme simule un système qui a, entre autres, la propriété d'être turing complet. le système simulé représente des objets dans sa mémoire qui sont identique aux objets du programme qui simule le système. Donc on peut en quelques sortes transférer les objets du système simulé vers la mémoire du programme qui simule le système. le programme, c'est le corps, et le système simulé, c'est ce qui est conscient et prend des décisions. c'est peut-être le système simulé qui a aussi la capacité de réfléchir.
+Ainsi, une fois qu'on a suffisament appris un truc, cette structure permettrait d'expliquer pourquoi certaines choses peuvent devenir automatique, sans qu'on doive offrir un effort conscient de réflection. 
+
+
+Prenons un exemple de texte d'un sujet dont je n'ai pas beaucoup de connaissances. :
+«
+On caractérise un virus par son incapacité à se reproduire par mitose, par scissiparité ou par méiose. Pour répliquer son acide nucléique, il dépend d'une cellule hôte qu'il doit infecter pour détourner et utiliser son métabolisme : un virus est nécessairement un parasite intracellulaire. Il est composé d'une ou plusieurs molécules d'acide nucléique (ADN ou ARN, simple ou double brin), éventuellement incluse dans une coque protéique appelée capside, voire d'une enveloppe lipidique (ex : l'Ebolavirus est un virus enveloppé). Parfois certaines capsides contiennent quelques enzymes (par exemple : transcriptase inverse du VIH) mais aucune pouvant produire de l'énergie.
+»
+Même si je parle et je comprend le français, il y a des choses que je ne comprend pas dans ce texte. Dans ce texte, il y a des concepts et il y a des connaissances qui me manquent. On pourrait m'expliquer en français les connaissances et les concepts qui me manquent. Alors ces choses sont basés sur d'autres choses un peu moins "compliqué?". Les concepts et les connaissances utilisés pour m'expliquer cela peuvent eux aussi êtres expliqués et ainsi de suite jusqu'à des sortes de concepts fondamentaux?
+Je peux aller sur google et aller chercher moi-même les informations qui me manquent pour comprendre ce texte. Une information manquante peut être un concepte que je ne connait/(comprend?) pas encore, ou un mots qui est synonyme d'un autre mots que je connais déjà.
+
+
+
+
+Existe-il dans notre monde différents types de choses à comprendre?
+
+En tout cas, il existe différentes façon de produire un compréhension de quelque chose. On peut se faire expliquer quelque chose, donc ça passe par le compilateur, le linkage relie ensemble les choses qu'on connait ou comprend déjà, ensuite ce qui reste est (on l'espère pour la personne qui reçoit l'explication) une compréhension. On peut également réfléchir nous-même et trouver un raisonnement logique qui explique ce que l'on voit ou ce que l'on souhaite comprendre. 
+
+Une explication, pour expliquer les choses, doit être logique. C'est quoi exactement qui fait que quelque chose est logique?
+
+Observer la réalité objective, essayer d'expliquer le résultat observé, est-ce que ça ce généralise à beaucoup d'autres choses?
+
+
+
+{
+
+Est-ce qu'il y a un lien entre les choses suivantes?
+	- comment un bébé fini par "comprendre" la vision? C'est à cause que l'espace euclidien possède des propriétés. EX: translation, rotation. Si on s'imagine qu'on reçoit plein de variable mathématique avec leurs valeurs, on peut se dire au début que toutes les variables qui sont actuellement à la même valeur sont/appartiennent au même "objet". Mais 2 variables qui sont souvant à la même valeur ne sont pas toujours à la même valeur. EX: il y a un grand objet et en face il y a un objet plus petit [_o_] (un rectangle et un cercle devant le rectangle. Plein de pixel/variables ont la même valeur que leurs pixels voisinnes, donc elles sont ensemble/le même objet. Mais à certains endroits, les pixels et leurs voisins n'ont pas les mêmes valeurs (sur les bors du petit objet qui est proche, juste avant la transition sur l'objet qui se situe derrière), donc ne sont pas le même objet. Ce qui permet de "comprendre" le concepte d'espace euclidien, c'est le déplacement des objets. Le déplacement d'un objet permet de déterminer quels pixels sont voisins et permet de comprendre que notre vision est une image en 2D.
+//Les pixels de mêmes valeurs qui appartiennent donc au même objet, c'est comme dans un texte, les noms propre identique réfèrent à la même personne.
+Les images que nous voyons sont des exemples de situations physiquement possible, et nous apprenons à interpréter ça comme une situation en 3d dans notre tête.
+
+
+
+
+	- Soit la fonction suivante :
+		|
+		| /
+		|
+		+-----
+Nous souhaitons prolonger le domaine de la fonction. Il nous suffit juste de prendre le crayon et dessiner la fonction. Pour continuer la ligne, pourquoi ne pas dessiner un barbeau? Rien nous empêche de prolonger la fonction avec un barbeau, mais ça ne semble pas logique et la fonction étendu ne sera pas intéressante à étudier. La fonction original a la propriété d'être une ligne droite, alors autant la prolonger d'une manière qui conserve les propriétés qu'elle possède déjà.
+
+	- J'ai regardé sur youtube le talk d'un gars qui faisait l'implémentation d'une fonction qui retourne la somme de deux nombres, mais le rôle de la fonction est donné par les testes unitaires, qui eux ne doivent pas utiliser le symbole + de l'addition dans le code pour vérifier que la fonction calcule l'addition. c'est le même problème que définir un mot en français sans utiliser ce mot. Le teste unitaire naïf avait des résultats précalculés d'additions, et faisait juste vérifier, par exemple, que la fonction retourne 8 pour (3, 5). L'implémentation contenait seulement des "if" qui retournait la réponse contenu dans le teste unitaire et qui retourne 0 autrement. Un teste unitaire amélioré va plutôt vérifier que la fonction a les mêmes propriétés que l'addition. 0 est un élément neutre. Commutative. Pour (x, x), la fonction retourne x _multiplié_par_ 2. Une fois qu'on force le respect des propriétés, il devient presque impossible de mal programmer la fonction.
+
+}
+
+
+Assomption: J'ai raison, la phase d'optimisation d'un compilateur est bel et bien ce nous avons programmés qui ressemble le plus à de la pensée/réflexion humaine, avec optionnellement une couche d'abstraction supplémentaire pour être de la réflection humaine.
+Quand je doit (on me donne un travail à faire ou j'ai décidé moi-même que je voulais programmer le truc) programmer un truc, je doit réfléchir à comment le programmer pour que le programme ait la propriété émergeante d'accomplir la tâche désiré. Ça veut dire que j'ai un algorithme capable de générer un algorithme ayant la propriété émergeante d'accomplir une tâche donnée. Cela me fait penser à notre capacité, selon moi, à générer un compilateur d'un langage uniquement avec des exemples de code dans ce langage.
+Cet algorithme plus fondamentale est capable de générer un compilateur d'un langage vers (notre tête) uniquement via des exemples de code dans ce langage.
+
+
+Situation : Je me fais donner un avion en papier ainsi qu'une feuille vierge. Ma tâche est de faire un 2e avion en papier identique. Je suis capable d'analyser l'avion déjà plié et de déterminer dans quel ordre faire différent plits pour reproduire l'avion. Donc je suis capable de faire un algorithme qui produit cet avion.
+
+
+
+==== TO IMPROVE ====
+
+Déboguer, c'est souvant voir le résultat, et retracer à l'envers l'exécution du programme jusqu'au point où la logique du programme est à changer.
+Cela requiert une compréhension dans notre tête du comportement du programme, ainsi qu'une compréhension de ce que l'on voit (Est-ce que c'est un programme qui affiche des lignes dans une console? ou est-ce que le programme change la couleur d'un rectangle, et c'est seulement la dernière instruction de changement de couleur qui sera visible?).
+Nous observons le programme à l'écran. Ce que nous observons a des propriétés logiques, en relation avec le comportement du programme. Si le programme fait juste changer la couleur d'un rectangle à l'écran, si y'a plusieurs lignes qui changent la couleur du rectangle, nous voyons seulement la dernière ligne qui met une couleur au rectangle. Cette situation est différente d'un programme qui ajoute des lignes dans la console. Absolument tout dans notre vie commence d'abord par l'observation qu'on fait de la situation.
+
+
+==== END TO IMPROVE ====
+
+-Le programme a pour tâche d'afficher à l'écran (couleur d'un rectangle, sortie dans une console ou autre) des trucs/informations.
+
+-Cependant le programme ne met pas à l'écran les choses qu'on voudrait qu'il mette étant donné les données fournies au programme.
+
+-Nous entrons maintenant dans notre algorithme de débogage pour trouver comment corriger (correctement) le comportement du programme.
+
+-Nous utilisons notre compréhension mentale de comment fonctionne l'affichage du programme pour retracer où aproximativement le programme a fait des affichages que nous ne voulons pas qu'il fasse. (les propriétés des instructions qui changent la couleur d'un rectangle VS les propriétés des instructions qui ajoutent une ligne de texte dans la console).
+
+-On retrace la logique compréhensible de la tâche qu'il faudrait accomplir et on la compare avec la tâche que le programme accomplit. (Le langage de programmation sert seulement à expliquer à l'ordi ce que l'ordi doit faire. Le langage écrit ne contient pas la raison de chacune des instructions.)
+
+
+
+Imaginons la situation suivante: Un programme a une tâche à accomplir et il donne son résultat à la fin. Cependant, la façon dont le programme nous donne son résultat n'est pas d'afficher une ligne dans la console ni de changer la couleur d'un rectangle, ce sera de mettre une valeur dans une case/addresse de la mémoire, et ensuite le programme s'arrête. Naturellement, nous ne voyons pas les données dans la mémoire. Nous devons alors prendre des moyens pour aller chercher la réponse du programme. Nous pouvons ouvrir l'ordi, brancher au mother board des outils pour espionner ce qu'il se passe dans l'ordi et si nécessaire faire une attaque informatique pour exécuter du code qui va récupérer l'information stoqué dans l'addresse mémoire cible. Nous pouvons aussi utiliser un programme qui va récupérer dans la mémoire la valeur stoqué et nous l'afficher.
+Conclusions :
+Dans notre façon d'aller chercher l'information, il peut y avoir des bugs. 
+Même si une observation est faite indirectement, il s'agit quand même d'une observation de l'état actuel de l'univers.
+Dans notre situation, mettre une valeur dans un addresse mémoire se comporte de la même façon que changer la couleur d'un rectangle : seul la dernière valeur sera celle qui sera observable à la fin, car le programme s'est exécuté trop rapidement pour voir toutes les valeurs intermédiaire.
+Si, à la place, dans notre situation, notre programme doit mettre dans l'addresse mémoire une liste de chaines de textes, alors ça ce comporterait comme la sortie graphique d'une console. 
+Notre compréhension de la réponse d'un programme (/d'un processus de traitement de l'information) sera la même (du même type) peut importe que l'observation soit faite directement ou indirectement.
+Peut-être que notre compréhension dans notre tête est reproduite à l'identique et avec les mêmes propriétés que la réponse du programme elle-même, ce qui permet de réfléchir en comprenant intuitivement comment trouver la ligne de code qui met tel ou tel texte dans la sortie. (difficile à expliquer cette idée).
+
+
+
+Revenons à une situation normale : Le programme change la couleur d'un rectangle ou affiche des choses dans la console. Mais le programme ne donne pas la bonne réponse, alors il y a un bug à trouver et corriger. Nous observons un état: l'état du programme terminé. Ce que le programme doit produire: un état. Ce que le programme a produit: un état différent de celui qu'il doit produire. 
+
+On peut poser dans un cadre plus formel, presque mathématique, l'état du programme à la fin, et analyser chaque lignes de codes (des instructions de changement d'états) et analyser quelles lignes il faut modifier pour corriger le programme. 
+Faire cela s'appele du débogage, et cet algorithme, je pense, est le même algorithme ou une sous-partie de l'algorithme qui permet de générer un compilateur uniquement avec des exemples de codes écrit dans un même langage.
+
+
+
+Quand on écrit des gros programmes, on utilise un gestionnaire de version, souvant git. Git permet de sauvegarder l'état actuel des lignes de codes du programme. Un programme est une description de changements d'états à effectuer (une description-de-changements-d'états-à-effectuer). Quand on exécute un programme, on met l'ordi dans un état où il s'apprêtre à exécuter le programme. Pour corriger un bug, il faut modifier le code du programme, donc générer une nouvelle version du code du programme, donc un nouvel état du code du programme.
+//TODO: ajouter une fonctionnalité au programme.
+
+Déboguer un programme/fixer un bug, c'est un algorithme qui prend l'état actuel du code du programme, et génère une nouvelle version/ un nouvel état du code du programme qui n'a plus ce bug. (Dans un bug compliqué) cela est fait en utilisant le code actuel du programme (code qui est une liste de changements d'états) et en analysant ligne après ligne l'évolution des états (avancement du programme et changements dans la mémoire) afin de repérer l'endroit du code où [...].
+
+
+https://en.wikipedia.org/wiki/Abstract_interpretation
+https://en.wikipedia.org/wiki/Rice%27s_theorem
+//en liens avec ce que le prof de français m'a suggéré https://en.wikipedia.org/wiki/Wittgenstein_on_Rules_and_Private_Language
+
+https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
+https://en.wikipedia.org/wiki/Static_program_analysis
+https://en.wikipedia.org/wiki/Dynamic_program_analysis
+
+
+
+D'abord on choisi [ce que l'on veut programmer], ensuite on le programme. Comment convertir une tâche à accomplir en une liste d'instructions à suivre? Imaginons la situation suivante: Un employé se pointe au travail à chaque jour. Sa tâche est de classer des formulaires selon deux catégories: catégorie A et B. Nous sommes dans les années 1970 et ce travail est accomplit entièrement manuellement. C'est une tâche déterministe qui peut être donné à un autre employé. Maintenant arrive l'automatisation avec l'informatique. Maintenant, ses documents sont électronique mais il continue de faire sa tâche manuellement, à l'ordinateur. En 2000 sa compagnie engage des programmeurs pour automatiser certaines tâches de leurs employés et les programmeurs arrivent à cette tâche ci, trier les documents entre les piles A et B. En analysant le travail de l'employé et les documents triés, ils font la remarque suivante: La cellule 8K, dans la pile B, n'est jamais inférieur à 1500. Ils ne sont pas encore capable d'automatiser au complet son travail, mais ils sont capable d'automatiser un peu, en utilisant des "trucs". Ce truc, c'est d'observer tout les cas trié, dont la tâche a déjà été effectué, et essayer de trouver des propriétés sur les documents triés dans chaques piles.
+
+Quand on écrit une expression dans une if pour exécuter du code seulement dans une situation qu'on souhaite, on traduit peut-être une table de vérité des combinaisons de critères (qui correspondent aux cas qui doivent provoquer l'exécution du code) en une expression booléenne. La mise en situation précédante est peut-être juste un exemple d'une table de vérité assez grosse, dont les programmeurs ont seulement été capable de trouver une petite expression booléene qui aide un peu.
+
+
+Cela n'empêche pas le fais que parfois, un bug existe dans la tête. Un bug n'est pas nécessairement le programmeur qui a mal écrit ce qu'il voulait que l'ordi fasse. Un bug c'est parfois quand le programmeur n'a pas réalisé qu'il y a une faille dans le raisonnement logique qui a dicté la rédaction d'un algorithme, et que le programmeur a correctement implémenté l'algorithme tel que planifié. 
+
+Programmer c'est faire en sorte que l'ordi fait ce que nous voulons qu'il fasse. Débogger/trouver un bog c'est trouver/comprendre pourquoi l'ordi ne fait pas ce que nous voulions qu'il fasse. Trouver un bug, c'est toujours comparer le programme avec ce que *nous voulons* qu'il fasse. C'est quoi qu'on veut? Qu'est ce qui défini c'est quoi qu'on veut? Si le bug est dans le raisonnement logique qui a dicté la rédaction de l'algorithme, alors un programmeur qui débug du code aura beau comparer le code du programme avec le pseudo-code planifié à l'avance, il devra éventuellement réfléchir à la logique de l'algorithme pour déterminer si l'algo fait vraiment ce que nous pensons qu'il fait : ce qu'on veut. 
+
+C'est quoi ce que l'on veut? Ça veut dire quoi "pourquoi" et "parce que"?
+Si on débug un programme et qu'on arrive à une if qui ne devrait pas s'exécuter, on va se dire "pourquoi ça s'exécute". Évidement, l'expression booléenne est vrai à ce moment, donc le code du if s'exécute. Mais la question du "pourquoi", c'est qu'on se demande pourquoi le code précédant ne fait pas ce que l'on veut. Il y a plusieurs définitions de "pourquoi" dans le dictionnaire, mais quand on débug et qu'on se demande "pouquoi", c'est parce que la réalité (le code exécuté, la réponse de l'ordi) ne correspond pas à l'image de la réalité dans notre tête.
+
+Lorsqu'on est dans une situation où on se demande "pourquoi?", c'est qu'il y a conflit entre notre compréhension/ce qu'on s'attendait, et la réalité de ce qui s'est passé. si nous sommes dans la condition d'un if, que la condition est "if (var1 == true && var2 == true)" et qu'on se demande pourquoi ça n'a pas marché, se demander "pourquoi" c'est plutôt se demander (A) "pourquoi la réponse de cette équation n'est pas vrai (est faux)". la réponse à cette question est évidement "parce que les valeurs des variables à ce moment de l'exécution ont faites en sorte qu'en calculant l'expression, ça a été évalué à false". une nouvelle question est (B) "pourquoi var1 (ou var2) est faux" (étant donné notre compréhension du code/de la situation, cela devrait être vrai). en se posant la question (A), on se demande pourquoi ce n'est pas comme on pensait que ce serait. en se posant la question (B), on se demande pourquoi ce n'est pas comme on pensait que ce serait. le débogage est un processus récursif où 1) (à partir de ce qu'on voit (directement) qui n'est pas comme on veut (ex: un console.log("valeur : " + valeur); qui affiche "valeur : 42" alors qu'il devrait afficher "valeur : 48")) on énumère les choses qui font en sorte qu'on n'a pas eu le résultat qu'on pensait qu'on aurait. 2) pour chacunes de ces choses, on fait l'étape 1.
+
+Pour chaque fonctions/situations/procédés qu'on souhaite programmer (ex: calcul de racinne carrée, recherche du minimum dans un tableau, déterminer si deux nombres ont des facteurs commun, ...), il y a toujours plusieurs façons / plusieurs algorithmes qui existent. Parfois, deux algorithmes sont même radicalement différent. Dans une situation donné, je veux une fonction qui me retourne un nombre qui répond au concepte que ce nombre, multiplié par lui-même, est égale au nombre que j'ai donné à la fonction. La méthode de héron n'est pas le concepte, c'est seulement une façon de procéder parmi d'autres. Le concepte est différent de l'implantation (ce qui fait prenser, en java, à l'interface List<> vs des implémentations comme ArrayList<>, LinkedList<>, ...).
+
+{
+//exemple 1 :
+
+//cette variable devient true si on trouve une case plus grande que 10.
+bool hasAnyNumberGreaterThan10 = false; 
+for (int i = 0; i < arr.length; i++) {
+	if (arr[i] > 10) {
+		hasAnyNumberGreaterThan10 = true;
+	}
+}
+return hasAnyNumberGreaterThan10;
+
+//exemple 2 :
+return count(SELECT elem FROM arr WHERE elem > 10) > 0;
+return (SELECT elem FROM arr WHERE elem > 10).length > 0;
+
+
+}
+
+
+Pour chaque concepts possible, il y a une infinité d'implémentations possibles. Le concepte de machine turing complet, il y a une infinité d'automates cellulaires, ou de systèmes régis par des règles (tous des implémentations) qui ont la propriété émergeante d'être turing complet. Mon objectif ultime, c'est d'avoir un programme capable de "réfléchir" et de "comprendre". "Réfléchir" et "comprendre", ce sont des conceptes. Ce que je cherche, c'est une implémentation qui aura la propriété émergeante de "réfléchir" et de "comprendre" des "choses". Et des implémentations, il y en a à l'infinfi.
+
+
+Il y a souvant des bugs dans les implémentations, mais parfois un bug réside dans le concepte lui-même ?. C'est-à-dire qu'on doit créer un programme capable d'effectuer une tâche/un concepte. On élabore une façon d'organiser les informations dans le programme ainsi que quelques algorithmes importants pour l'accomplissement de la tâche du programme. On vient de planifier comment on va implémenter le programme. Mais chacun de ces morceaux est lui-même un concepte qui devra être implémenté d'une certaine façon et ainsi de suite. Parfois un bug réside plus en hauteur, dans le désign du programme, que les implémentations des plus bas niveaux comme un simple alrogithme de recherche du minimum d'un tableau.
+
+
+Situation : Nous avons un programme avec plusieurs fonctions qui appelent une autre fonction qui appelent elles-mêmes une autre fonction. La fonction C appele la fonction B qui appele la fonction A. Les fonctions servent à répondre à un concepte. Les fonctions ont également été implémenté d'une certaine façon. [todo : quand on débogue, le processus récursif qu'on fait].
+
+
+
+"Maïeutique"
+Parfois, un bug est compliqué à trouver. Mais que le bug soit difficile ou simple à trouver et à régler, le sentiment / la réalisation qu'on a quand on vient de trouver la source/l'origine du bug ressesmble à ce que la profe de philo décrivait pour la "maïeutique". L'instant où on comprend soudainement la raison pourquoi le programme ne se comportait pas comme on le pensais. Ensuite on peut réfléchir à une façon de corriger les instructions pour que ça fasse ce que l'on veut. Mais il faut d'abord vivre cet instant où on comprend pourquoi la réalité (comportement buggé du programme) ne correspond pas à ce que nous pensions que la réalité devrait être (ce que nous voulons).
+
+Il faut trouver un programme qui a la propriété émergeante de trouver la/les différences entre ce que nous pensons du fonctionnement/résultat du monde et la réalité?
+
+Dans une situation où il y a un bug, il y a ce que nous pensons du comportement de la réalité, et il y a le vrai comportement de la réalité. 
+
+https://fr.wikipedia.org/wiki/Fentes_de_Young
+[Dans ce paragraphe, j'exprime une idée. TODO: make sure que ça correspond à la réalité historique de ce qu'il s'est passé]
+L'expérience des fentes de Young, le chercheur avait probablement son idée de ce qu'il allait se passer avant de faire son expérience. Mais après avoir fait son expérience, il était dans une situation où il ne comprenait pas ce qu'il s'était passé. Si la personne qui réfléchit, on l'espère, pense de façon logique, et que sa prédiction sur le comportement de l'univers est basé sur de la logique, alors voici la situation :
+	- la personne a un modèle logique du comportement de l'univers en tête.
+	- la personne a utilisé ce modèle pour prédire le comportement de l'univers, et n'a fait aucune erreur au regard du modèle
+	- le comportement de l'univers est différent.
+C'est la même situation qu'un programmeur qui vient de terminer, il le pensait, une fonctionnalité dans un programme, mais qu'en la testant, il se rend compte qu'elle ne fonctionne pas encore : il y a un bug. Il faut maintenant trouver comment modifier notre modèle de compréhension pour comprendre pourquoi nous avons ce résultat, et ensuite utiliser ce modèle de compréhension pour programmer un truc qui fonctionne comme on veut.
+
+Au fur et à mesure qu'un programmeur programme, il développe un modèle de compréhension sur le fonctionnement du programme. Ce modèle est analogue à un physicien qui a un modèle du fonctionnement de l'univers. Tomber sur un bug, c'est comme un physicien qui fait une expérience dont il n'est pas capable d'expliquer le résultat. Il faut trouver à quel endroit de notre modèle il faut modifier le modèle pour que ça corresponde maintenant avec la réalité.
+
+Il me semble que nous avons diserves situations de débogage où on n'a pas toujours le même objectif mais voilà une tentative :
+[TODO not finished]
+Un algorithme de débogage est un algorithme qui a en entrées :
+[TODO not finished]
+	- Le modèle
+[TODO not finished]
+	- Le comportement de la réalité (le comportement du programme. les situations où le programme se comportait comme on l'attendait, et les situations où on ne comprend pas pourquoi le programme se comporte ainsi)
+[TODO not finished]
+
+
+L'ordinateur est comme l'univers : il obéit à des lois logiques et déterministe.
+Ainsi :
+	- 1) Parfois, nos théories actuelles expliquent correctement et objectivement le comportement de l'univers pour la situation que nous avons. Cependant, la personne a dans sa tête un modèle incorrecte de la situation qu'elle a elle-même créée (programmé). Le bug réside dans la tête de la personne, dans la compréhension du code qu'elle a écrit.
+	- 2) Parfois, la personne a dans sa tête un modèle qui correspond correctement à ce que son code effectu, cependant la tâche effectué par le code ne correspond pas à la tâche que la personne souhaite que le code effectue.
+
+	- 1) Parfois le modèle à corriger est la représentation du programme dans notre tête qui ne correspond pas à ce que le programme fait réellement.
+	- 2) Parfois le modèle à corriger est le programme qui fait exactement ce que nous pensons, mais que l'algorithme implémenté ne fait pas ce que nous voulions qu'il fasse.
+
+
+Étant donné le concepte de la tâche à effectuer, que nous essayons de programmer, il y a plusieurs "modèles" :
+	- Le programme lui-même est un modèle/une implémentation de la tâche à effectuer.
+	- Nous avons dans notre tête un modèle (une sorte d'implémentation pour nos pensées) de ce que fait le programme.
+
+
+Peut importe dans quel environnement on travaille (la "puissance" des instructions), nous devons avoir une sorte de compréhension minimal des instructions qui sont à notre disposition pour pouvoir rédiger une liste d'instructions qui font la/les tâches qu'on désir.
+Si on programme en assembly ou dans un "langage", "système", "environnement" ou "framework" (comme brainfuck) où les instructions disponible ne sont pas très "puissante", nous avons besoin de comprendre c'est quoi que font chacune des instructions individuellement pour pouvoir assembler des instructions qui accomplissent une tâche désiré. En brainfuck, il nous faut une compréhension du fonctionnement des instructions et des cases pour (plus ou moins) se développer des "trucs" pour faire un programme qui fonctionne. Apprendre à programmer, c'est s'obtenir une compréhension des instructions qui sont à notre disposition pour faire des tâches.
+Ensuite, nous pouvons nous faire des méta-instructions (des fonctions/méthodes), qui seront une implémentation d'un concepte d'action à effectuer. (Pour autant que la méta-instruction (fonction/méthode) n'a aucun bug) nous allons nous faire une compréhension du concepte que cette méta-instruction effectue. Nous allons nous servir de cette méta-instruction pour faire d'autres méta-instructions auxquelles nous allons nous faire une compréhension du concepte de l'action qu'elles effectuent.
+La seule différence entre une méta-instruction et une instruction de base est que je n'ai pas l'implémentation d'une instruction de base. Une instruction de base en assembly est implémenté avec le processeur, qui lui-même est implémenté avec l'électricité, qui lui-même est implémenté avec la physique quantique, etc... .
+
+Pistes à explorer : {
+	« Une compréhension » est une classe qui peut être instancié en mémoire. Les attributs / propriétés d'une instance de compréhension sont à déterminer, sûrement avec l'aide des paragraphes précédant. Une compréhension est peut-être un savoir sur une propriété mathématique que remplit un concepte. Peut-être qu'à un concepte est rattaché plusieurs compréhension dans notre tête.
+	« Un concepte » est une classe qui peut être instancié en mémoire. Un concepte me semble right now être une unité de base de toutes les formes de logique qu'un humain peut avoir la chance de comprendre. Parfois, deux domaines séparés des sciences logiques ont des trucs régis par des lois logiques qui s'avère être homologue. C'est-à-dire qu'on peut appliquer les mathématiques d'une science à l'autre science et vise-vesa. Je pense right now que ce sont les conceptes mathématiques impliqués qui correspondent, comme s'il y avait des "sortes" de logiques possibles et que parfois, des éléments de deux domaines séparés utilisent le même concepte, c'est-à-dire que fondamentalement ils fonctionnent exactement de la même façon. c'est plus une sorte de "feeling". 
+
+	Peut-être que « L'instant où on comprend soudainement » = génération d'une instance de compréhension dans notre tête.
+
+}
+
+
+
+
+L'univers est plus ou moins déterministe parce qu'il est régis par des lois qui sont constantes dans le temps (les lois ne changent pas). Son état futur est prévisible si on connait ses lois et son état présent (la position des particules dans l'espace).
+
+Le processeur de l'ordi est un univers. Il est régis par des lois qui ne changent pas dans le temps. Son état futur est prévisible si on connait ses lois et son état présent (les instructions qu'il exécute et la mémoire).
+
+Un programme qui intéragit avec l'utilisateur est un univers. Il est régis par des lois (le code) qui ne changent pas dans le temps. Son état futur est prévisible si on connait ses lois et son état présent (les données des champs textuels, par exemple).
+
+N'importe quoi qui a des état et qui obéis à des lois est un "univers".
+
+
+
+
+
+
+
+
+//pour déboguer, il faut réfléchir. le « débogage » est un subset de la réflexion humaine, mais c'est de la réflexion quand même.
+
+
+
+
+//devient true/false quand/lorsque ...
+
+//les fonctions peuvent appeler d'autres fonction. penser au typage qui permet de déterminer les types de d'autres choses.
+
+
+//il faut 2 langages : un langage pour expliquer les concepts que les fonctions individuellements doivent remplir. un autre langage qui explique, dans une fonction, comment se fait-t-il que le code remplit la tâche de trouver une réponse au concept que la fonction doit calculer.
+
+
+
+
+
+
+Lorsqu'on parle, c'est parce qu'on veut communiquer une information. Le langage humain, c'est juste de l'encodage. Y'a plein d'encodages. Depuis qu'on est jeune, on a d'abord aprit par coeur les phrases de bases pour dire la plupart des choses qu'on veut dire au quotidient. Ce que l'on veut, c'est communiquer une information (avec paramètres, comme le sujet et/ou un objet). Ce que l'on apprend, c'est les sons qu'il faut produire pour communiquer le message correspondant à ce que l'on veut communiquer. 
+
+
+
+Le langage humain est un stack based language?.
+
+
+
+
+Puisque nous vivons dans un monde où il y a une dimension temporelle, peut-être que le concepte d'étape effectuées une après l'autre nous est naturelle dans notre compréhension du monde. L'univers passe d'états en états successivement. Certaines choses sont facile à mettre en code, comme des calculs mathématique. J'imagine que c'est parce qu'à l'école on apprend à nos enfants à faire des calculs mathématique étapes après étapes, donc c'est pas très nouveau.
+
+
+https://en.wikipedia.org/wiki/Symmetric_group
+
+Il est possible d'utiliser la théorie des groupes et les symmétries pour étudier d'un point de vu mathématique certaines choses. Définitivement à faire.
+
+
+
+
+
+
+
+Dans les features du langage humain, il y a les verbes à l'infinitif. Les verbes à l'infinitif. Les verbes à l'infinitif, c'est du pattern-matching. Une fonction est une verbe. Parler d'une fonction à l'infinitif (to see, to say, dire, voir parler, to do (this), to do (that), to (compute square root of (that) number)), c'est parler de l'action de faire quelque chose sans le faire immédiatement ou insinuer qu'on le fera plus tard. Si j'ai un ami et que je lui demande de me trouver dans mes dossiers de source code une fonction capable de trier une liste, ou bien je lui dit "trouve une fonction capable de trier une liste" (je lui donne le concepte de ce que la fonction doit accomplir, il doit la rechercher dans tout les langages dans tout mes fichiers), ou bien je lui dit "trouve une fonction qui prend une liste, et pour chaques éléments elle cherche si dans chaque élément suivant il y a un élément pour petit que le premier élément, si elle en trouve un elle l'échange avec le premier élément dont je t'ai parlé et ensuite ..." (je lui donne une implémentation qu'il doit rechercher dans tout les langages dans tout mes fichiers).
+
+
+
+
+Quand on manipule des objets en C/C++, on stoque (avec les pointers) des références vers les objets, et non les objets eux-mêmes. Si qqc apprend le c++ comme premier langage, et qu'on lui explique des algorithme de base comme trier une liste d'objets en ordre croissant, ou même d'autres algorithmes, il y a un point ou on lui dirait un truc comme "... l'objet est stoqué dans cette variable ...", mais c'est pas vrai. Expliquer à quelqu'un qu'une variable est un tiroir où on dépose un objet est bien pour la compréhension mais ce n'est pas vrai quand nous stoquons les références vers les objets. En réalité le comportement de "Object monTiroir = obj2;" est _Annalogue_, dans notre réalité physique, à avoir un tirroir, y placer l'objet et reprendre l'objet du tirroir plus tard. Ce n'est pas exactement la même chose. Le langage de programmation permet d'exprimmer des actions à faire. Pour que quelqu'un comprenne, il faut lui expliquer avec des choses qu'il connaisse déjà. L'ordinateur n'est pas un humain, alors les actions qu'il peut accomplir ne sont pas les mêmes que les actions qu'un humain peut accomplir. Cependant, si on utilise la théorie algorithmique pour établir un algorithme capable de trier une liste, et qu'on rédige un programme en français pour qu'un humain soit capable de mettre une liste en ordre croissant, et un programme en C pour qu'un ordi soit capable de mettre une liste en ordre croissant, les deux programmes, qui sont le même algorithme mais implémenté dans deux framework différent, vont utiliser des conceptes différent pour la mémoire/stockage. L'ordi a de la mémoire virtuelle. L'humain utilise l'espace physique à 3 dimensions de sa maison comme "mémoire" (et l'humain peut un peu tricher avec la mémoire dans sa tête qui est annalogue à la mémoire cache d'un ordi). Dans leurs mémoires, l'ordi et l'humain ont un équivalent de mettre une valeur dans une variable. Les deux ont un équivalent d'une variable. 
+
+
+
+
+L'action de « écrire un programme qui accomplit la tâche x ». x est le concepte accomplit par le programme. le programme devra avoir la propriété émegeante d'accomplir x. Ça me fait penser à une équation mathématique f(x) = x^2 - 2x + 4. Cette équation est moi. On ne peut pas calculer cette équation tant qu'on ne donne pas la valeur de x. x c'est le concept que le programme doit accomplir. On ne peut pas écrire de programme tant qu'on ne s'est pas fait dire le concepte que le programme doit accomplir/calculer.
+
+Moi je suis cette équation/programme qui prend en paramètre un concepte à accomplir et je produit un programme pour l'accomplir.
+
+Si on me décrit en quelques mots un concepte qu'un programme doit accomplir, la raison pour laquelle je suis capable d'aller faire un programme en c# de 1000+ lignes de code n'est pas parce que le français est un algorithme de compression très puissant et que quelques phrases en français sont équivalentes à 1000+ lignes de code. La raison pour laquelle je suis capable de faire un programme de 1000+ lignes de code avec seulement quelques phrases en français, c'est parce que j'ai dans ma tête des vastes connaissances supplémentaires à la description qu'on me donne du programme. Je lis la description en français du programme, les mots en français font références à des choses que je connais et donc je connais déjà les liens logiques à d'autres choses qui ne sont mêmes pas mentionnées dans la description du concepte du programme, et je reli ensemble d'avantages de choses mêmes pas mentionnés dans la description du concepte du programme. Dans ma tête, je sais non seulement comment les choses sont reliés entres elles, éventuellement j'arrive à programmer une chose qui a des propriétés mathématiquement reliées avec d'autres choses. C'est là qu'on arrête de créer des classe et qu'on commence à faire des méthodes qui font des calcules. Pour programmer quelque chose, il faut savoir comment les choses sont structurés. Ou bien nous avons déjà ces connaissance, ou bien (par exemple) c'est un exercice de programmation pour débutant donné à un élève. Cet élève n'a pas les connaissances dans sa tête mais ce dont il doit programmer est écrit sur le papier et les connaissances qui lui manquent sont également écrites sur le papier. Donc il a tout ce qu'il faut pour programmer, s'il réfléchit.
+
+Lorsqu'on programme, on fait toujours la même chose : on fait des classe, des propriétés, des fonctions/méthodes, ensuite on écrit du code à l'intérieur. Besoin de passer à travers tout les éléments d'un tableau? Toujours la même boucle for. Je pense que c'est possible de faire un programme que tu lui dit "fait un programme pour afficher les moyennes des étudiants de tout les groupes" (dans un langage spécialisé) et qu'avec sa base de connaissance il est capable de générer automatiquement une classe "groupe", une classe "étudiant", une classe "note" et une classe "matière". La classe "groupe" contient une liste de "étudiant". La classe "étudiant" possède une liste de "note". La classe "note" possède une propriété double qui est la valeur de la note et une propriété "matière". La classe "matière" possède une propriété string qui est le nom de la matière. la classe "groupe" possède une méthode pour calculer la moyenne de ses étudiant de la façon désiré par le concepte du programme demandé. La base de données contient également de l'information sur comment calculer la moyenne d'une liste. Pour simplifier l'entré des données dans le programme généré, le programme généré pourrait avoir une classe "Database" similaire à mon TP2 d'interfaces utilisateurs. Cette classe Database serait statique et à l'intéreur d'elle on aurait des List<> pour contenir strictement TOUTE les instances de CHAQUES classes utilisé par le programme. L'entré des données dans le programme généré pour être en remplissant cette classe Database. L'utilisateur utilise le programme théorique pour générer un programme désiré. L'utilisateur fourni ensuit au programme généré des données dans un format similaire à json (mais du json avec des références). La méthode main du programme généré charge les données dans sa Database et continue l'exécution de code automatiquement généré qui a la prorpiété émergeante de faire le calcul désiré par la description.
+
+
+
+
+
+Les différentes façons de représenter l'"appartenance" dans des objets dans la mémoire. Nous pouvons avoir une classe Dossier qui a une liste de dossier enfant. 
+class Dossier {
+	List<Dossier> children = new List<Dossier>();
+}
+Ou bien nous pourrions imiter une base de données relationnelle.
+class Dossier {
+	int id = /* random number */;
+	List<int> childrenIds = new List<int>();
+}
+Ou bien plus compliqué
+class Dossier {
+	int id = /* random number */;
+}
+class ParentChildRelation {
+	int idParent = /* a number */;
+	int idChild = /* a number */;
+}
+Lorsqu'on programme, on essaye de programmer "le mieux possible", "du beau code". Mais en réalité, pour que le programme fonctionne, la façon utilisé pour représenter les données n'a pas d'importance sur la structure en arbre représenté ici. L'important c'est qu'il soit possible (qu'il existe des instructions valides pour) de trouver les enfants, ou de trouver le/les parents. Il existe un concept abstrait d'"Appartenance", et il y a une infinité de façons de l'implémenter dans du code, tout comme il y a une infinité de façons d'implémenter un triage de liste. La similarité entre cet exemple et le triage d'une liste est (je pense), dans la façon implémenté, les oppérations à effectuer pour récupérer les enfants ou les parents d'un dossier VS les oppérations à effectuer pour mettre la liste en ordre. Les instructions/caractères finals placés dans le fichiers sont placés comme ça parce que dans la tête du programmeur (s'il ne fait pas d'erreur) il comprenait que ces instructions/opérations/représentations allaient fonctionner pour effectuer la tâche désiré.
+
+Peut-être que c'est le même algorithme, dans notre tête, qui décide de l'ageancement de la mémoire (class) et la façon dont les méthodes sont programmés, puisque les deux situations sont similaires.
+
+Peut importe le framework, peut importe les instructions/oppérations qui me sont disponibles, peut importe la façon (valide) dont les données sont représentés en mémoire, il me semble que peut importe le langage de programmation, si on mit dit "Programme (tel) algorithme/calcul sur ces données", je suis toujours capable de le faire. Cependant il faut se faire dire comment les données sont implémentés/représentés dans la mémoire. Il faut également se faire dire quelles sont les opérations disponible. Est-ce que je peux instancier de nouveau objets? Est-ce que je peux définir de nouveau objets? Est-ce que je peux effectuer des oppérations mathématique ou dois-je programmer mes propres nombres? Si on me jette immédiatement dans un framework extrêment étranger, avant de programmer un algorithme je vais essayer de comprendre les oppération qui sont disponibles. Si les oppérations ne sont pas assez puissantes, alors je vais essayer de préparer des groupes d'oppérations pas puissantes qui servent à effectuer des oppération plus puissantes (comme quand on programme en assembly, les instructions de bases ne sont pas très puissantes, mais on se fait dans notre tête des groupes d'instructions en assembly pour faire des oppération *un peu* plus abstraite. c'est aussi comme le rubik's cube, où on a des "algorithmes" pré-écrit qui sont plus puissants que les 12 rotations de bases). Un moment donné je vais peut-être même trouver des correspondances entres des oppérations du framework bizarre dans lequel on m'a jeté et d'autres framework/système dont je suis déjà familié.
+
+
+
+
+
+
+Mise en situation: Je dois programmer une fonction utilitaire. Ce que je veux que cette fonction fasse, c'est une seule chose. Comment cela peut être accomplit, il y a plusieurs façons principales de le programmer (et une infinité de façons dégueulasses qui dérivent de ces façons principale). Mais une fois que j'ai décidé comment cela allait être programmé, je dois programmer chaques sections de l'algorithme et chaques sections, individuellement, doivent faire une seule chose, et comment cela peut être accomplit, il y a une infinité de façons. C'est réccursif.
+
+Lorsqu'on écrit du code, il y a une contraite principale, c'est que le code écrit doit fonctionner! Mais on peut rajouter d'autres contraintes. On peut, par exemple, imposer qu'il n'y ait qu'un seul return statement, ou qu'il y ait un maximum de 3 variables déclaré dans la méthode, etc.
+
+
+
+
+
+Si je prend une méthode utilitaire et que je lit la description de ce qu'elle doit accomplir comme travail/calcul, je dois en théorie être capable de rédiger des tests unitaires et ensuite la méthode doit pouvoir valider les tests unitaires. Pas besoin de regarder le code source de la méthode ciblé. Je pense (mais je ne suis pas sûr) que le concepte de ce qu'une méthode doit accomplir doit pouvoir exister indépendament des implémentations possibles. Il est possible que le concepte de ce qu'une méthode doit accomplir ne peut pas exister indépendament des implémentations possibles ainsi que certains edge case.
+
+Si le concepte de ce qu'une méthode doit accomplir ne peut pas exister indépendament des implémentations et des edge cases : Moi quand je programme, je me donne (entre autres) la contrainte que mon code soit simple, mais une sorte de simplicité mathématique. Simple pour la même raison que tout les moteurs 3d utilisent les quaternions. Les quaternions ne sont pas simple, mais c'est "plus beau", "plus simple" mathématiquement à programmer que tout les edge cases de bloquage cardan si on programmait des angles traditionnel. Quand plusieurs méthodes utilisent d'autres méthodes qui utilisent encore d'autres méthodes, cette contrainte de simplicité est une pression qui agit sur les conceptes des méthodes que je décide d'implémenter, cela agit sur les valeurs retournées par mes méthodes pour certains edge cases. 
+
+
+
+
+
+
+
+
+IMPORTANT {
+
+Ma tête a toute les propriétés émergeante dont je cherche à programmer. Ma tête existe physiquement dans l'univers, pour cette raison, je pense qu'il est possible de faire un programme capable de réfléchir, d'être conscient, de comprendre, etc... . Les nombres (en mathématique) sont des choses abstraites mais nous pouvons représenter ces choses sans implémenter dans les lois physique de l'univers une calculatrice numérique qui opère sur ces représentations. Le concepte de ce qu'une méthode doit accomplir, c'est abstrait, et ça existe dans ma tête, encodés dans les atomes et les électrons. Tout comme les nombres, on peut utiliser une implémentation physique pour représenter d'autres choses abstraites (le concepte qu'une méthode/fonction doit accomplir). (J'imagine dans ma tête une signature de fonction qui prend en paramètre une liste et qui retourne un nombre. Et je dessine des flèches entre les paramètres/retour de la fonction avec des indications minimales sur le travail à accomplir).
+
+Dans cette situations/mise en situation, il y a une liste de «choses» (paramètre en entré et truc retourné ne sont peut-être pas différent) et le concepte définit (que la fonction/méthode doit accomplir) : [ (entre les paramètres et le retour) que le paramètre (une liste) a une propriété qui est une quantité et qu'il faut trouver cette valeur. (Nous cherchons à programmer la méthode count/length sur une liste). ].
+
+Cependant voici une contraite : la liste n'as pas de propriété/attribut ou méthode/fonction pour récupérer cette "quantité" (le nombre d'éléments). (La bonne chose à faire serait d'améliorer la classe ChainList pour que les méthodes Add et Remove conservent un compte du nombre d'élément, cependant ceci est un exemple où on retrace la logique qui permet d'écrire la méthode count, ici le "concepte" N'est PAS de réécrire la classe. Le concepte est de calculer le nombre d'éléments dans la liste.)
+
+Nous avons à notre disposition les outils suivants : créer des variables. Oppérations mathématiques élémentaires et stoquer des résultats dans des variables. Exécuter un morceau de code autant de fois que cette quantité qu'on cherche grâce à un foreach.
+
+Nous avons également les connaissances suivantes : Faire une multiplication c'est la même chose que faire une addition répété. 1 * 4 = 1 + 1 + 1 + 1.
+
+Dans notre situation: Nous n'avons pas accès au nombre que l'on cherche, mais nous pouvons répété du code autant de fois que ce nombre.
+int countAmountOfItems(List<Object> list) {
+	int rep = 0;
+	//le block de code suivant s'exécute autant de fois qu'il y a d'éléments
+	//dans la liste. on compte +1 pour chaques éléments.
+	foreach (Object item in list) {
+		rep += 1;
+	}
+	return rep;
+}
+
+
+ou bien aussi :
+
+//techniquement on peut le simplifier en une seule classe, mais cela démontre le point j'espère.
+//un ChainListElement existe seulement s'il contient un élément pour la liste.
+class ChainList {
+	
+	private ChainListElement root = null;
+	
+	public int count() {	
+		if (this.root != null) {
+			return this.root.count();
+		}
+		return 0;
+	}
+	
+}
+
+class ChainListElement {
+	
+	public ChainListElement next = null;
+	public Object value = null; //valeur stocké à cet endroit de la liste
+	
+	public int count() {
+		int rep = 1;
+		if (this.next != null) {
+			rep += 1; // rep++;
+		}
+		return rep;
+	}
+	
+}
+
+ou bien encore :
+
+class ChainList {
+	
+	private ChainListElement root = null;
+	
+	public int count() {
+		int rep = 0;
+		ChainListElement current = this.root;
+		while (current != null) {
+			rep += 1; // rep++;
+			current = current.next;
+		}
+		return rep;
+	}
+	
+}
+class ChainListElement {
+	
+	public ChainListElement next = null;
+	public Object value = null; //valeur stocké à cet endroit de la liste
+	
+}
+
+
+
+
+
+Ce qu'on appele la signature d'une méthode/fonction est concrètement un gros % du concepte de la méthode/fonction, sans les "explication?" de comment la méthode/fonction fait.
+
+Un programme aussi est une méthode/fonction qui accomplit un concepte, donc qui a une "signature".
+
+
+
+} IMPORTANT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

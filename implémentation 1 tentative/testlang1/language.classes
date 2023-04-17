@@ -1,0 +1,96 @@
+
+
+
+static class source {
+	
+	arguments: VariableList;
+	code: InstructionList;
+	
+};
+
+
+
+class VariableList {
+	first: VariableListItem;
+};
+class VariableListItem {
+	item: Variable;
+	next: VariableListItem;
+};
+
+class Variable {
+	value: @memory;
+};
+
+
+
+class InstructionList {
+	first: InstructionListItem;
+};
+
+union InstructionListItem [
+	InstructionZero;
+	InstructionConst;
+	InstructionVariable;
+] {
+	
+	next: InstructionListItem;
+	
+};
+
+
+//les instructions à aucun paramètre.
+union InstructionZero [
+	InstructionPop;
+	InstructionDuplicate;
+	InstructionAdd;
+	InstructionSub;
+	InstructionMul;
+	InstructionDiv;
+	
+	InstructionNop; //instruction qui ne fait rien
+	InstructionGoto;
+] {};
+
+//instructions dont le paramètre est une constante (@memory).
+union InstructionConst [
+	InstructionPushConst;
+	InstructionPrintlnConst;
+] {
+	value: @memory;
+};
+
+//instructions dont le paramètre est une variable.
+union InstructionVariable [
+	InstructionPushVariable;
+	InstructionPopTo;
+	InstructionPrintlnVariable;
+] {
+	variable: Variable;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

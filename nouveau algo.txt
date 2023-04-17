@@ -1,0 +1,141 @@
+
+Étant donné une liste de toutes les instructions de bases et représentations de bases disponibles dans un environnement initiale avec du code source conçu pour s'exécuter dans cet environnement, en lui donnant toutes les instructions de bases et les représentations de bases d'un nouvel environnement, l'algo doit trouver comment représenter les mêmes choses et comment faire (actions/méthodes) les mêmes choses dans le nouvel environnement (effectivement/concrètement, traduire le source code dans le nouveau environnement).
+
+
+La syntaxe != la sémentique.
+
+
+
+
+Il y a 4 choses au total : Il y a les représentations de bases disponible et les représentations des instructions de bases pour un environnement. Il y a deux environnements au total, donc 4 choses au totale.
+
+
+
+
+
+==================[ tentative 1 ]=================
+//représente une valeur constante
+class Value {
+	//une façon de noté cette valeur
+	Symbol denotation;
+}
+
+//représente quelque chose qui peut contenir/conserver une valeur (variable)
+class Conteneur {
+	//la valeur actuellement contenue
+	Value value;
+}
+
+
+
+
+
+
+
+
+
+
+==================================================
+==================[ tentative 2 ]=================
+//inspiré de ma machine virtuelle théorique (réflection totale).
+
+Il n'y a que des objets. Les noms des propriétés des objets sont un objet, et les valeurs des propriétés sont un objet.
+
+Il y a l'«univers», qui est la liste exhaustive de tout les objets existants.
+
+L'univers contient tout, même les instructions qui sont elles-mêmes en cours d'exécution.
+
+Comment on fait pour savoir quelle est l'instruction actuelle? Il y a un objet de l'univers qui a une propriété qui indique l'objet qui est l'instruction actuelle. Nous savons que c'est là qui est indiqué l'instruction actuelle, autant pour le programme qui fait rouler le code que le code en cours d'exécution. Les deux savent que c'est cette propriété de cet objet qui indique quelle est l'instruction actuelle.
+
+
+/* /!\ /!\ /!\
+	Dans un langage conventionnel, le source code n'est souvant pas réflectif (ou jamais). Rien n'empêche d'avoir plusieurs univers: un univers que c'est les valeurs, l'autre univers que c'est l'exécution du source code avec un truc qui indique l'instruction actuelle et toutes les instructions statique.
+*/
+
+Maintenant il faut un truc qui représente "quand la propriété x de l'objet indiqué par la propriété y de cet objet (l'instruction actuelle) == l'objet_add, alors voici le changement d'état : dsfadgnsigure(une façon d'indiquer le changement d'état)asdjfyuagr".
+Est ce qu'on fait tout les changements d'états en même temps? Parce que certaines instructions peuvent avoir besoin de faire plus d'un changement d'état.
+
+Il ne faut pas oublier qu'à long terme, on peut faire dans notre tête des instructions (méthodes/fonctions) plus grandes à partir des instructions de bases et de d'autres méthodes/fonctions.
+
+class Environment {
+	Universe[] universes; //les règles peuvent peut-être référencer à un univers via son index dans la liste.
+	
+	Rule[] rules;
+	
+}
+
+// peut-être que les méthodes/fonctions peut générer leurs propre petit environnement le temps de l'exécution du code à l'intérieur? 
+
+class Rule {
+	Expression expression; //expression qui utilise les valeurs stockés dans les univers pour indiquer si cette règle s'applique.
+	
+	StateChange[] stateChanges; //les changements d'états à effectuer si l'expression est vrai.
+}
+
+//truc qui retourne une valeur et/ou qui va chercher une valeur dans le/les univers.
+//puisque ça va chercher une valeur de le/les univers, c'est un peu en lien avec comment les données nécessaire pour rouler l'environnement sont représenter (représentation qui est différente du programmeur qui programme dans cet environnement où il y a des représentations de données qui sont créés pour l'exécution du programme). Il y a plusieurs façons de programmer un même environnement d'exécution.
+class Expression {
+	
+	
+	
+}
+
+
+==================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

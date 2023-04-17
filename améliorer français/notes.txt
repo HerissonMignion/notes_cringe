@@ -1,0 +1,81 @@
+Tout aller voir sur allo prof.
+"Analyse de la phrase"
+"Phrases à construction particulière"
+	"La phrase infinitive"
+	"La phrase à présentatif"
+	"La phrase non verbale"
+"La phrase transformée"
+
+
+
+
+
+sujet.verbe(...compléments);
+
+"Groupe prépositionnel" semble être des named parameters. Les groupes nominaux peuvent eux-aussi avoir des expensions avec groupe prépositionnel. 
+
+
+
+
+subordonnée relative
+https://www.alloprof.qc.ca/fr/eleves/bv/francais/la-subordonnee-relative-f1152
+
+"tout les avions _qui_sont_au_sol_"
+
+
+
+sortes de verbes :
+https://www.alloprof.qc.ca/fr/eleves/bv/francais/le-verbe-f1184#les-sortes-de-verbes
+	transitif (fonction qui prend un ou plusieurs arguments)
+	intransitif (fonction qui ne prend aucun argument)
+	pronominal (verbe avec se, me, te, ...)
+	impersonnel (verbe qui se conjugue avec le pronom impersonnel "il")
+	attributif ((ex: verbe être) utilisé pour qualifier quelqu'un/chose)
+	auxiliaire
+		auxiliaire de conjugaison
+		auxiliaire de modalité
+		auxiliaire d'aspect
+		auxiliaire factitif (notion avancée)
+
+sens de verbes : (à en prendre et en laisser)
+https://www.alloprof.qc.ca/fr/eleves/bv/francais/le-verbe-f1184#sens-verbes
+	action
+	état/existance
+	changement/transformation
+	mouvement/déplacement
+	perception/sensation
+	sentiment
+	opinion
+	météorologie
+	connaissance
+
+
+
+
+
+
+
+
+
+
+
+=================[ random ]==============
+
+
+(exemple d'attribut du sujet)
+"La science-fiction est un genre littéraire."
+"la science-fiction" est un membre d'un énumération qui s'appele "genres littéraux".
+
+
+
+
+
+
+
+
+
+
+
+
+
+

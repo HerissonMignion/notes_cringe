@@ -1,0 +1,46 @@
+() //la première ligne, c'est les inputs du programme. littéralement les arguments de main.
+
+//programme pour calculer e
+
+
+
+
+push 1;
+duplicate;
+duplicate;
+popto sum;
+popto current;
+popto currentFactorialInverse;
+
+label begin;
+	push currentFactorialInverse;
+	push current;
+	div;
+	duplicate;
+	popto currentFactorialInverse;
+	
+	push sum;
+	add;
+	popto sum;
+	
+	push current;
+	push 1;
+	add;
+	popto current;
+	
+	println sum;
+	
+goto begin;
+
+
+
+
+
+
+
+
+
+
+
+
+

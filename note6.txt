@@ -1,0 +1,198 @@
+
+d'une représentation à l'autre...
+
+
+Un élève du secondaire se fait donné une expression algébrique. C'est une formule mathématique, donc une liste d'instruction qui peut être exécuté. Cependant, nous lui donnons quel est le résultat de l'exécution et nous le privons d'une des données de la liste d'instruction. Nous lui demandons de trouver la donnée manquante. En langage courant, nous lui demandons de résoudre x. Isoler x. Cela est possible parce que les opérations mathématiques de base sont réversibles. Que les opérations soient réversibles signifie qu'on peut naviguer vers le futur ou le passé du chemin d'exécution. 
+
+(4 + 6 + x) / 2 + 3x = 5 - 7
+
+Ainsi, le signe égale = indique notre position dans le chemin de l'exécution. Les valeurs mathématiques des nombres, en programmation, ont la propriété désiré de ne pas tous êtres la même entité (je crois? à réfléchir).
+
+Les instructions de bases en mathématique ont également des propriétés qui permettent très souvant de manipuler la liste d'instruction en une autre liste d'instruction beaucoup plus simple à calculer ou à en retracer le chemin d'exécution à l'envers dans le temps.
+
+Il serait peut-être plus juste de parler d'arbre d'instructions, et non de liste d'instructions.
+
+Parfois, on explique plutôt une situation à quelqu'un, on lui parle des données qu'on lui fournit (les inputs) et on lui explique les propriétés émergeantes que doit avoir une liste d'instructions qu'il doit maintenant produire. 
+
+
+Souvant, quand on explique quels propriétés émergeantes un programme doit produire, la propriété émergeante remplit des relations avec d'autres systèmes/représentation (ex: trouver un nombre qui remplit les propriétés mathématiques suivantes, déterminer la somme de la largeur de toutes les fenêtres dans mon écran, ...). D'une représentation à l'autre.
+
+Même les choses que je vois ne sont qu'une représentation des sensations ressentis par mes yeux?
+
+
+Le langage humain est un orchestrateur de représentation (representation orchestrator)? Il permet d'expliquer les propriétés émergeantes en relation avec ce qu'il se passe dans le programme.
+
+
+Dans les différentes représentations qu'on se fait dans nos têtes sur les atomes, les électrons, les listes en programmation, les nombres, les opérations mathématiques, les actions/verbes qu'on fait dans notre vie quotidienne, les formes géométriques, on réfère aux choses en leur donnant un nom qui est ensuite utilisé dans le langage humain. Les mots du langage humain sont également des relations entre les objets. Il y a des mots pour décrire la position des objets dans l'espace 3d, ainsi que leurs positions relatives à d'autres objets (sur, dessus, dessous, à droite, à gauche, derrière). Le langage humain a aussi les mots pour parler des objets qui existent physiquement avec nous. Le langage humain a aussi les mots verbes pour parler des actions/verbes que l'on fait au quotidien. 
+
+Quand une personne me raconte ce que fait son programme, c'est seulement à distance que le français exprimme les choses faites par le programme. C'est ma tête qui reconstitue ce que le programme fait en utilisant les représentations de l'exécution d'un programme dont je connais déjà.
+
+
+Les choses que les humains peuvent faire (verbes), il y a des mots/verbes pour en parler. Si j'ai besoin de faire un langage pour un programme qui a des fonctionnalités novatrices, les verbes devront êtres les actions que le programme peut faire. Sont vocabulaire pourra ensuite grandir pour parler des nouvelles choses.
+
+Si je fais un programme qui a la capaciter de faire de l'abstraction, alors il y a un verbe pour lui dire que je veux qu'il fasse cela. Si le programme est capable de traduire d'une langue à une autre, alors il y a un verbe pour lui dire de faire cela. 
+
+
+
+
+[utiliser l'extension des fichiers pour indiquer le langage de la représentation]
+
+
+
+
+Y'a des features syntaxique du français qui découlent de notre capacité à réfléchir.
+ex : "que [asdf] soit vrai signifie que [qwer] (est vrai)."
+"que (le carré de ce nombre soit pair) signifie que (ce nombre est pair)".
+
+```
+que {
+	le carré de le nombre A est pair
+}
+signifie que {
+	le nombre A est pair
+};
+// Si j'ai un programme capable d'analyser des équations mathématiques
+// et capable de se promener dans l'équation, les conclusions qu'il
+// derait pourrais êtres exprimées dans un langage comme celui-là.
+
+
+
+que {
+	que {
+		le carré de ce nombre est pair
+	}
+	signifie que {
+		ce nombre est pair
+	}
+}
+signifie que {
+	ce langage permet d'exprimer des conclusions
+};
+
+
+
+met 1 dans A;
+tant (que {
+	// le "que" ici n'a pas la même signification.
+	// le "que" ici signifie "then" en anglais.
+	A est plus petit que 10;
+};) alors {
+	ajoute 1 dans A;
+};
+
+demande moi {
+	la valeur de A;
+};
+
+demande toi {
+	la valeur de A;
+};
+
+
+
+il y a {
+	une variable A (
+		vaut 3; // vaut au sens de =, valoir, fait référence aux propriétés
+			// des variables de contenir une valeur.
+			// on s'est inventé un concepte qui permet de contenir
+			// un nombre. ceci est la façon de dire quel nombre il contient
+	);
+};
+
+quand {
+	quelque chose {
+		change (une valeur (de A););
+	};
+}
+alors {
+	
+};
+
+```
+
+"Le apparition des gaz de combat [...]".
+Ici, "l'apparition" ça parle d'un évènement ou d'un moment dans le temps. Notre compréhension du temps est une fabrication de notre tête, ce n'est pas une feature du français.
+
+"quand { {les gaz de combat} existe } alors { [...] }".
+
+
+il y a {
+	une variable A;
+};
+
+{ une variable A; } existe;
+
+
+
+Faire un programme qui peut analyser une syntaxe et automatiquement comprendre comment la lire pour que ça fasse du sens.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Si j'ai un programme écrit en javascript et qui utilise des fonctions, et que j'ai un autre langage similaire à javascript (javascript0) mais où le programmeur ne peut pas déclarer de fonction, si j'ai un programme qui peut transférer le code de javascript vers javascript0, alors ce programme devra être capable de détecter qu'il faut copy paster le code de chaques fonction à chaque endroit où la fonction est appelée. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

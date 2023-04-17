@@ -1,0 +1,54 @@
+
+
+
+static class ram {
+	
+	current: InstructionListItem; //instruction actuelle
+	
+	evaluation_stack: EvaluationStack;
+	
+};
+
+
+
+
+
+class EvaluationStack {
+	last: EvaluationStackItem;
+};
+
+class EvaluationStackItem {
+	previous: EvaluationStackItem;
+	value: @memory;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

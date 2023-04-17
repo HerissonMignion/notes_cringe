@@ -1,0 +1,81 @@
+
+
+classes runtime "./runtime.classes";
+classes language "./language.classes";
+
+
+
+begin {
+	
+	set ram.current = source.code.first;
+	set ram.evaluation_stack = new EvaluationStack (this) {
+		set this.last = %null;
+	};
+	
+};
+
+
+running [
+	
+	case <
+		value-equals ram.current == %null;
+	> {
+		stop; //il n'y a plus d'instruction.
+	};
+	case <
+		class-equals ram.current == InstructionPop;
+	> {
+		set ram.evaluation_stack.last = ram.evaluation_stack.last.previous;
+		set ram.current = ram.current.next;
+	};
+	case <
+		class-equals ram.current == InstructionDuplicate;
+	> {
+		set ram.evaluation_stack.last = new EvaluationStackItem (this) {
+			set this.value = ram.evaluation_stack.last.value;
+			set this.previous = ram.evaluation_stack.last;
+		};
+		set ram.current = ram.current.next;
+	};
+	case <
+		class-equals ram.current == InstructionAdd;
+	> {
+		
+	};
+	
+	
+	
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

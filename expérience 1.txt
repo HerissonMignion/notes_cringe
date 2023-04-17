@@ -1,0 +1,39 @@
+Sommes nous obligé de représenter les choses avec une classe ou une structure?
+
+
+
+
+Aujourd'hui, si nous voulons programmer un stack, nous allons probablement faire une classe, avec des attributs privés comme un tableau pour mémoriser les données que nous insérons dans le stack ainsi que des méthodes/fonctions pour insérer et retirer des données du stack.
+
+
+
+
+
+
+
+Les différents langages de programmation ne sont qu'une syntaxe et une sémentique qui indiquent des zones mémoires avec la façon de les linker ainsi que des opérations (de transformation) à effectuer sur ces zones mémoires.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

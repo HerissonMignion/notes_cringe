@@ -1,0 +1,130 @@
+
+Tentative d'implémentation 1.
+N'a pas pour but d'être le truc universelle qui est capable de représenter tout les systèmes. A pour but d'être capable de représenter des systèmes/environnement fréquent en programmation et de voir s'il est effectivement capable de convertir entre plusieurs langages. 
+
+
+Toutes actions opèrent sur des zones mémoires.
+Quand on appele une action, on lui donne une liste de zones mémoires (pass by name).
+
+
+action = fonction = méthode = oppération élémentaire.
+
+L'objectif est de faire un programme capable de convertir/traduire une fonction écrite dans un langage vers un autre langage.
+
+
+Les zones mémoires sont des trou noir dont nous n'avons pas besoin de nous soucier de ce qu'elles contiennent. Les actions/oppérations élémentaires ou composées font juste déplacer des valeurs ou inventer de nouvelles valeurs à mettre dans ces cellules mémoires.
+
+Pour cette tentative d'implémentation, nous n'allons pas nous soucier des représentation des données, nous allons seulement nous soucier des représentation des systèmes. 
+
+Puisque nous ne nous soucions pas des représentations des données, nous n'avons pas besoin d'implémenter les opérations de bases comme add sub mul div puisqu'elles sont communes et existent dans tout les langages que je vais tester.
+
+Abandonner le concepte de boucle et de goto, se concentrer sur le concepte de branchement.
+
+Un programme est une suite d'actions de base qui a une action suivante qui s'arrête quand une action n'a pas d'action suivante. 
+
+Faire une description de système qui permet de représenter l'exécution d'un langage/système dont les instructions sont basés sur un stack (assembly like) ou dont les instructions ressemblent à un langage ordinaire basé sur la syntaxe du c. 
+
+Pour décrire un système, il faut décrire chacunes de ses instructions/actions de bases. Dans un langage basé sur le c, il y a des instructions qui ont des expressions à l'intérieur. De tels instructions peuvent donc contenir un ou plusieurs arbres d'autres choses à l'intérieur d'elles mêmes. Un instruction peut également être aussi pauvre qu'une instruction en assembly. 
+
+
+
+
+
+
+
+
+
+Donc :
+un langage/système est la combinaison de :
+	- une description des instructions de bases qui forment le langage (seront des instances en mémoire qui indiquent les instructions du programme). par exemple une classe statement et une classe expression.
+	- (optionnel) programmer à l'extérieur un parser pour passer d'une représentation textuelle vers la représentation objectifiée/instantiée des instructions en mémoire ainsi qu'un reverse-parser/encodeur qui transforme la représentation objectifiée en mémoire vers une représentation textuelle
+	- une ou plusieurs descriptions qui indiquent comment passer "à l'instruction suivante", "à l'étape suivante". Peut-être faire une sorte de langage qui sert à décrire/programmer des insterpréteurs. 
+
+
+Ne pas oublier que pour simplifier l'implémentation, les environnements ont en commun certaines actions de bases comme les oppérations mathématiques élémentaires, un équivalent de console.log (qui est une action de base), et ils partagent les mêmes valeurs dans les variables (c'est-à-dire que qu'on ne rentre pas à l'intérieur des zones mémoires). 
+
+Puisque les mathématiques sont la façon la plus facile de faire des programmes basiques de tests, il faudra une façon de mettre des littéraux de nombre (hard-codé) dans des zones mémoires. On pourrait faire en sorte qu'il y ait plein de variables qui porte comme nom un nombre entier et qui ont pour valeur ce nombre entier. 
+
+
+Si le Programme devient capable de faire des optimisations, nous ne voulons pas que nos programmes de tests (qui seront des programmes qui n'interragissent pas avec l'user) deviennent automatiquement des { return (la réponse précalculée du programme); }.  
+
+(
+Si un jours on peut indiquer au Programme les propriétés des opérations mathématiqus et qu'il devient capable de faire des manipulations algébriques, tester s'il est possible de le faire transformer le calcul de la racine carrée avec la méthode de héron en le calcul de la racine carrée avec la série de taylor, ou d'autres trucs équivalent. 
+)
+
+Un programme est en soi une action qui prend en entrées des inputs et qui donne en sortie des outputs. Certains environnements/systèmes et/ou langages permettent de définir d'autres actions/méthodes utilitaire pour le programme. Il est du ressort du programme de l'interpréteur de gérer cela (les actions/méthodes utilitaires internes à ce programme). L'interpréteur doit faire avancer le programme et appeler les actions de bases.
+
+
+Comment dire à l'interpréteur par quelle instruction commencer? Cela dépend des systèmes/environnements et/ou langages, alors c'est la représentation objectifiée en mémoire qui a une place qui stoque par où commencer. L'interpréteur lis cela pour commencer l'exécution.
+
+
+
+
+
+
+On pourrait essayer de relier ensemble les implémentations qui implémentent le même concepte. Ainsi peut-être qu'il est possible de faire un algorithme qui analyse les propriétés émergeantes. 
+```
+class LinkedListForewardItem [] {
+	item: @memory;
+	next: LinkedListForewardItem;
+};
+class DoubleLinkedListForewardItem [] {
+	item: @memory;
+	next: DoubleLinkedListForewardItem;
+	previous: DoubleLinkedListForewardItem;
+};
+concept [
+	class LinkedListForeward [] {
+		first: LinkedListForewardItem;
+	};
+	class DoubleLinkedForewardList [] {
+		first: DoubleLinkedListItem;
+	};
+];
+
+// TODO : ne pas oublier qu'il existe également des conceptes d'actions à effectuer sur certains conceptes. 
+
+
+```
+
+
+
+TODO : Faire l'équivalent d'un parser generator pour indiquer au programme (dans un dérivé/équivalent de BNF (mes .classes étendus)) comment lire la syntaxe d'un langage. Pas besoin de faire la génération de code pour parser le langage, juste se servir du .classes contenant les symboles terminaux pour lire en live le fichier et dumper directement dans la mémoire toutes les données.
+
+
+Ne pas oublier que les choses abstraites n'existent pas physiquement dans notre univers. Elle sont seulement représentées/représentables. À mes fins de tests, j'ai beau inventer plusieurs langages de programmation cheap ayant leurs particularités syntaxiques et sémentiques, j'invente toujours une rerésentation textuelle de ces langages afin de pouvoir facilement faire des programmes dans ces systèmes/environnements. Si je programme un équivalent de parser generator pour ne pas avoir à programmer un parser pour chaque langages de tests que je crée, alors il va falloir se mettre à indiquer les symboles terminaux de chaques langages dans leur fichiers respectifs. Ce sont les symboles terminaux qui indique les trucs de base d'une représentation, en quelques sortes. J'affirme que les choses abstraites n'existent pas physiquement. Cela implique que dans nos têtes comme dans nos ordinateurs, les choses abstraites comme les nombres sont représentés. Dans les ordinateurs, les nombres sont représentés avec des 1 et des 0. Des symboles terminaux. À l'origine, la tentative d'implémentation 1 était juste un test d'implémenter un algorithme qui peut parfaitement convertir du code d'un langage/environnement/système à un autre. Pour faire cela, il faut parser la représentation textuelle du code pour faire la représentation objectifié en mémoire. Mettons qu'on converti du code d'un environnement A vers B. Ensuite, il faut passer à travers les instructions de A, le comportement de l'environnement A, trouver comment refaire le même comportement dans B, générer la représentation objectifié en arbre des instructions dans B, ensuite faire l'inverse du parser pour générer la représentation textuelle du code B (avec ses symboles terminaux). Quand nous avons programmer le parser d'un langage ainsi que l'explication du comportement du langage, nous avons assez d'information pour exécuter le code dans ce langage. Exécuter du code est d'ailleur la première chose que je vais programmer (après les parser) pour tester que tout marche correctement. Pendant l'exécution de code, les choses, les valeurs sont représentés en mémoire avec les symboles terminaux de la représentation des nombres, par exemple, pour mémoriser les nombres que l'algorithme/programme est actuellement en train d'utiliser. IMPORTANT : Même pendant l'exécution, on utilise éventuellement des symboles terminaux pour représenter les choses. Mais puisque c'est dans la mémoire, nous n'auront pas besoin de leurs associer une image ou un caractère. Les actions/méthodes (add, println (jusqu'à maintenant)) qui ont l'air de juste "exister" dans l'environnement (les .inter qui décrivent/sont une implémentation de l'exécution de l'environnement/langage/système) sont eux aussi implémentés pour chaque représentations existante en tête/dans l'environnement. Je dois add deux nombres binaire 8 bit, alors je procède comme ça. Je dois ajouter un élément à la fin d'une ArrayList, alors je procède comme ça. Je dois ajouter un élément à la fin d'une LinkedList, alors je procède comme ça. Il y a des conceptes de choses, mais il y a aussi des conceptes d'actions. 
+
+
+symboles terminaux pour représenter les données en mémoire.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

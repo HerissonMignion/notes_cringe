@@ -1,0 +1,61 @@
+
+
+Précédement, dans mes travaux de réflection, je suis parvenu à la conclusion que peut-être les propriétés émergeantes, les conceptes et les "décrit" par les tests unitaires sont en réalité la même chose. Il me semble qu'il nous faut avoir une représentation à long terme des conceptes.
+
+Les conceptes, parce qu'ils sont abstraits, nous pouvons seulement en implémenter une représentation parmis d'autres représentations. Deplus, j'avais conclu que nous pouvons seulement expliquer un concepte par les propriétés émergeantes et/ou les comportements qu'il a. Donc une représentation ressemblerait à des tests unitaires, mais beaucoup plus générale au lieu d'être des cas spécifiques?
+
+
+Ici est une tentative de développer une langue pour les conceptes, de la même façon que j'était parvenu à faire un patron de langage de programmation basé sur le français en écrivant plein de phrases et en examinant les tournures de phrases et les points en commun. Ensuite faire un langage habituel qui reprent les choses qui semblent êtres importantes. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://en.wikipedia.org/wiki/Concept
+```
+The semantic view of concepts suggests that concepts are abstract objects. In this view, concepts are abstract objects of a category out of a human's mind rather than some mental representations.[8]
+
+There is debate as to the relationship between concepts and natural language.[5] However, it is necessary at least to begin by understanding that the concept "dog" is philosophically distinct from the things in the world grouped by this concept—or the reference class or extension.[10] Concepts that can be equated to a single word are called "lexical concepts".[5]
+
+The study of concepts and conceptual structure falls into the disciplines of linguistics, philosophy, psychology, and cognitive science.[11]
+
+In the simplest terms, a concept is a name or label that regards or treats an abstraction as if it had concrete or material existence, such as a person, a place, or a thing. It may represent a natural object that exists in the real world like a tree, an animal, a stone, etc. It may also name an artificial (man-made) object like a chair, computer, house, etc. Abstract ideas and knowledge domains such as freedom, equality, science, happiness, etc., are also symbolized by concepts. It is important to realize that a concept is merely a symbol, a representation of the abstraction. The word is not to be mistaken for the thing. For example, the word "moon" (a concept) is not the large, bright, shape-changing object up in the sky, but only represents that celestial object. Concepts are created (named) to describe, explain and capture reality as it is known and understood.
+
+[...]
+
+// Senses and reference
+
+Gottlob Frege, founder of the analytic tradition in philosophy, famously argued for the analysis of language in terms of sense and reference. For him, the sense of an expression in language describes a certain state of affairs in the world, namely, the way that some object is presented. Since many commentators view the notion of sense as identical to the notion of concept, and Frege regards senses as the linguistic representations of states of affairs in the world, it seems to follow that we may understand concepts as the manner in which we grasp the world. Accordingly, concepts (as senses) have an ontological status
+```
+
+
+
+
+
+
+
+

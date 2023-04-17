@@ -1,0 +1,80 @@
+
+
+Tentative d'écrire l'algorithme de translation entre 2 environnements/langages/systèmes.
+
+
+
+Il y a des "ram.current" ou des "source.first" ou des "ram.current.variable.value". Je vais appeler cela des storage access path (SAP)
+
+Naturellement, tout les SAP commencent par une classe statique.
+
+
+
+
+(en ce moment je regarde comment traduire B vers A)
+
+(TODO : essayer de partir du code source à traduire. parce que, en ce moment, je fait juste comparer les fichiers interpretor.inter)
+
+Le programme prog1.txt fait des println en sortie. C'est une propriété émergeante. On regarde quel "extern" c'est, et on retrouve dans le interpretor.inter de destination tout les "extern" identique. (Dans notre cas, il y en a seulement 1). Dans la source nous avons "extern println ram.current.variable.value;", alors que dans la destination nous avons "extern println ram.stack.last.value". Nous analysons dans la destination comment mettre ce qu'on veut dans ram.stack.last.value. Nous trouvons :
+```
+		set ram.stack.last = new EvaluationStackItem (this) {
+			set this.previous = ram.stack.last;
+			set this.value = ram.current.variable.value;
+		};
+		set ram.current = ram.current.next;
+```
+Là c'est un peu déguisé avec le new, mais "set ram.stack.last.value = ram.current.variable.value;" est là. 
+
+C'était déjà évident, mais en gros l'algo doit retracer le chemin à prendre pour faire que l'information arrive là où on veut. 
+
+Le lien avec les [instructions du langage source et les instructions à générer pour la destination] et [l'analyse du chemin qu'il faut faire emprunter l'information] est dans les < > des cases. 
+
+Ne pas oublier qu'une façon (possible?) d'implémenter la tâche à accomplir, est de simplement trouver comment refaire chaque instructions dans le système/environnement/langage de destination. 
+
+Les instructions semblent êtres indiquées par les < > des cases.
+
+Donc, pour chaques instructions du langage source, trouver les propriétés émergeantes et sources de données à l'intérieur (ainsi qu'à l'extérieur) même du système/environnement/langage, et ensuite trouver une séquence de une ou plusieurs instructions dans le langage de destination. (Il y a toutefois 2 problèmes : Si on traduisait A vers B, nous aurions la situation inverse où il faut prendre 2 instructions en source et en faire une seule instruction dans la destination. Deplus, bien que je crois que c'est bien de considérer chaques instructions comme ayant des données d'entrées et des propriétés émergeante (choses qu'elles affectent), il me semble que l'utilisateur et les représentations mémoire implémentées dans les interpréteur peut tellement varier (à priori) que je ne suis pas sûr qu'il est possible de tracer "les données d'entrée" d'une instruction. À réfléchir).
+
+
+Donc, pour traduire un println (B) vers la destination (A), on observe qu'une propriété émergeante de cette instruction est l'appel à "extern println ...". En regardant dans la destination comment faire cet appel, on se rend compte qu'on ne peut pas lui donner le paramètre du "extern println ..." dans la même instruction, alors on regarde comment "choisir" ram.stack.last.value. On trouve l'instruction InstructionPushVariable qui met dans ram.stack.last.value une valeur qui provient de source (qui est donc contrôlé par le code de destination que l'algo doit générer). Dans la destination, il faut donc faire un InstructionPushVariable suivi d'un InstructionPrintln. L'algo a également le contrôle sur l'ordre des instructions générées. Pour s'assurer que les deux instructions seront exécutées dans le bon ordre, l'algo détermine/conclu (une fois de plus) quoi mettre dans le code des destination généré pour que le InstructionPrintln soit fait après le InstructionPushVariable (le .next des instructions). 
+
+
+
+
+
+
+
+
+
+
+Problème: dans le bus de faire des boucles, comment empêcher l'algorithme de faire une liste d'instructions dont le .next d'une instruction est juste une instruction précédante? Comment forcer l'algorithme à utiliser une instruction goto ou une structure de while, for ou fonction récursive pour faire des boucles? Le problème apparaît du fait que nous avons besoin d'une représentation objectifiée des instructions du langage en mémoire, après la phase de linkage, mais il faut que ce soit topologiquement identique au code source dans ce langage. C'est à dire que même s'il y a un goto inconditionnel dans un langage assembly like, il faut conserver en mémoire le fait que le code source est une liste d'instructions, et il faut garder l'ordre de cette liste. La destination d'un goto est de la sémentique. 
+
+Des pistes de solution:
+	Pour les fichiers .classes, ajouter une annotation optionnel aux attributs. Cette annotation indiquera si cette attribut ne peut pas être le début d'un cycle (une boucle). Faire en sorte que les autres objets atteignables à travers un attribut annoté ainsi peuvent faire des cycles (boucle), car autrement les fonctions récursive seront impossible.
+	Faire en sorte qu'une classe ne peut tout simplement pas se référencer une autre instance de sa classe directement. Seulement un autre objet dans un de ses attributs pourrait.
+	(Meilleurs solution je pense :) C'est peut-être seulement un problème de langage. Il serait possible d'inventer un langage où le programmeur peut spécifier manuellement quelle instruction suit une autre instruction grâce à une chaine de texte qui référencerait une autre instruction. Ce que je veux dire par problème de langage, c'est que c'est juste une structure interdite par la syntaxe des langages. Prendre par exemple un objet javascript dont la propriété asdf contient lui-même (l'objet). Si on fait JSON.stringify(notre objet), nous allons avoir une erreur parce qu'il y a un cycle. Cependant, dans nodejs, si on fait console.log(notre objet), nodejs a une syntaxe pour nous représenter quand un objet se contient lui-même ou quand un même objet apparaît plusieurs fois dans la structure affiché. Le problème c'est la syntaxe et la sémentique du langage. J'ai déjà planifié de programmer l'équivalent d'un parser generator. Il aura besoin d'un langage pour lui indiquer à quoi ressemble les tokens des différentes instances dans la représentation textuelle. Ce langage devra également indiqué comment fonctionne le linkage puisque les fichiers .classes sont la représentation objectifiée en mémoire après la dite phase de linkage. Il se trouve que la plupart des langages de programmation ne permettent pas d'indique que l'instruction suivant une instruction se trouve précédement, donc un algorithme de translation de programme d'un langage à un autre est obligé de respecter cette contrainte par sinon la représentation objectifiée en mémoire n'est pas traduisable en texte. 
+
+CONCLUSION: Pour faire un algo capable de transpiler, il faut également faire le langage pour le parser-generator (pour indiquer les contraintes de linkage, ce qui indique les liaisons qui peuvent et qui ne peuvent pas êtres faites entre les morceaux du langage dans la représentation objectifiée en mémoire). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

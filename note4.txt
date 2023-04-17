@@ -1,0 +1,105 @@
+
+
+propriétés émergeantes.
+
+Tout les programmes ont des propriétés émergeantes. Les propriétés émergeantes d'un programme c'est la tâche qu'il est censé accomplir.
+
+
+
+(Là je pense à FakeControlContainerEditer.cs lignes 687 à 737)
+
+Ligne 717, j'ai un commentaire "//on met un arrière sombre pour aider à voir la nouvelle taille du contrôle ...". J'ai indiqué dans le code comment une propriété émergeante a été implémenté.
+
+
+D'abord on me dit ce que le doit programmer, la propriété émergeante à programmer, ensuite je vais l'implémenter. Dans mon code, il y aura d'autres morceaux de trucs à programmer avec la/les propriétés émergeantes à programmer.
+
+
+
+
+
+
+
+un langage pour communiquer avec un tel programme?
+les verbes commencent par $
+$$ est un verbe qui est un ordre.
+$/ est un verbe au participe passé.
+
+un verbe, c'est comme une fonction, alors ça s'ouvre avec des parenthèses ().
+
+pour donner les attributs d'un objet, on ouvre des curly braces {}.
+pour donner une liste de statements, on ouvre des curly braces {}.
+
+# est le nom propre qui désigne l'interpréteur lui-même
+
+```
+#.$$make (
+	a program;
+);
+
+#.$$make (
+	a program {
+		$/call ("asdf");,
+		location: "~/bin"
+	}
+	which {
+		$$display ("hello world");
+	};
+);
+
+#.$$make (
+	a program { //on spécifie les propriétés du programme qui sera "instancié"
+		$/call ("asdf");,
+		location: "~/bin"
+	}
+	which { //à l'intérieur du which, le sujet des verbes (le programme) est inféré.
+		$$do { // le do est redondant.
+			$$display ("hello world");
+		};
+	};
+);
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

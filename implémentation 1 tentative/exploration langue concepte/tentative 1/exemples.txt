@@ -1,0 +1,121 @@
+
+
+
+
+
+une variable {
+
+	peut contenir une valeur quelconque à l'intérieur.
+
+	nous pouvons:
+		mettre une valeur à l'intérieur.
+		récupérer la dernière valeur qui a été mis à l'intérieur.
+
+}
+
+
+un nombre (entier) {
+
+	un nombre entier est une valeur.
+	un nombre entier représente une quantité. (ou est une quantité?)
+	
+	//inspiré de peano.
+	tout les nombres entiers ont un suivant et un précédant (séquence).
+	il y a un nombre entier qui représente la quantité de "rien du tout".
+	
+}
+
+
+une addition {
+
+	une addition est une opération/travail/action qui est effectuée sur deux nombres et qui fait un nouveau nombre en retour.
+
+	le résultat de l'addition est le jumelage des quantités données.
+	
+}
+
+
+
+un ensemble {
+
+	c'est la réunion d'une ou de plusieurs choses.
+
+	// pas une définition d'un ensemble.
+	plusieurs choses peuvent ou pas êtres réunnies parce qu'elles partagent des choses en commun.
+	
+}
+
+
+
+de l'énergie {
+
+	c'est la capacité à changer l'état d'un système.
+	
+}
+
+un matériaux conducteur {
+
+	c'est un matériaux où les charges électriques sont répartis de façon égale dans tout le volume. 
+	
+}
+
+un courant électrique {
+
+	c'est le déplacement de charges électriques.
+	
+}
+
+
+
+une liste {
+	
+	sert à ~indiquer/~contenir d'autres objets, selon un ordre.
+	
+	nous pouvons toujours ajouter un objet à une position quelconque de la liste. Après la liste conserve l'ordre (séquence).
+	nous pouvons toujours retirer un objet de la liste. Après la liste conserve l'ordre (séquence).
+	
+	
+	
+}
+
+
+
+//je ressent quelque chose de spécial pour ce mot?
+une séquence {
+	
+	quand certaines choses sont "plus grande" ou "après" d'autres, et donc que les autres choses sont "plus petite" ou "avant" elles.
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

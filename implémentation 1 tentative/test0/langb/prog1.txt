@@ -1,0 +1,41 @@
+//paramètres du main sont dans la première pair de parenthèse.
+//c'est les arguments. ce sont des noms de variable local.
+(toshow)
+
+label begin;
+println toshow;
+goto begin;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

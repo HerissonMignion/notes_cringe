@@ -1,0 +1,83 @@
+
+
+
+
+Il faut (probablement) pouvoir décrire l'état initiale de la mémoire sur lequel l'interpréteur agit. 
+
+
+Le parser parse le code source, instancie les objets en mémoire ET fait le linkage. 
+
+
+
+
+
+========================
+classes runtime "./runtime.classes";
+classes language "./language.classes";
+
+//ici on met l'état initiale de la mémoire sur laquelle l'interpréteur agit.
+begin {
+	
+	set ram.current = source.entry;
+	
+	//pour un truc qui ressemble plus à du java
+	set ram.current = new CallStackItem (this) {
+		set this.method = source.entry;
+		set this.current = source.entry.first;
+		set this.previous_stack_item = ram.current;
+	};
+	
+};
+
+//ici on met les règles de transformations qui font évoluer le système.
+//un seul des case devrait être valide en tout temps.
+running [
+	case <
+		//ici mettre les conditions qui doivent tous être respectées
+		//pour exécuter le code à l'intérieur du case
+		
+		adsf asdfaf erg qherr aregareg;
+		equal asdfa.fasdfqe.rgrwe == dagr.qeargaega.ergarg.aergaerg.aregaer;
+		
+		//vérifier le type de l'"instruction actuelle" (juste un exemple)
+		typeof ram.current == "InstructionAdd"; //un truc du genre
+		
+	> {
+		//ici on met les instructions à exécuter si le case est remplit.
+		//les instructions peuvent être manipulation de la mémoire de
+		//l'interpréteur, ou appel d'actions de base.
+		//idéalement, ces instructions doivent avoir le même effet peut importe l'ordre dans lesquelles elles sont indiquées ici. donc ces instructions impératives sont à exécuter tous en même temps. 
+		
+		fasdfasd adfua asd fsdasdf;
+		
+		
+		//pour faire arrêter l'exécution
+		stop;
+		
+	};
+];
+
+
+========================
+
+
+Les environnements/systèmes et langages, il faut définir les types sémantiques existant dans leur environnement et il faut également programmer un parser pour lire un fichier et tout charger dans la mémoire.
+Il faut également faire cela pour le langage ci présent qui sert à faire des interpréteurs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

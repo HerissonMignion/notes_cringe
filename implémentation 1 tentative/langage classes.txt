@@ -1,0 +1,173 @@
+
+
+Le langage est typé juste au cas où le typage stricte s'avère important pour d'autres algorithmes plus tard. 
+
+
+
+
+Ce fichier n'est rien qu'un exemple. 
+J'ai l'impression que je suis en train de déclarer la syntaxe d'un langage alors que je fais juste une représentation de toutes les features syntaxiques. C'est un peu comme du bnf, non?
+
+On pourrait faire un 3e fichier qui pousse la définition des classes jusqu'aux caractères dans les fichiers. Ainsi, il en manquerait pas beaucoup pour avoir toutes les informations nécessaire à l'implémentation d'un parser generator, ce qui permetterait de ne même plus avoir à programmer les parsers pour les langages qu'on ajoute. Aller se renseigner/remémoriser davantage sur les informations dont les parser generator ont besoin. 
+
+
+
+
+
+
+
+
+
+
+Exemple non-complété pour un langage dans lequel on peut déclarer des méthodes.
+===========================
+
+
+static class ram {
+	
+	callstack: Callstack;
+	
+	
+};
+
+
+class Callstack {
+	last: CallstackItem;
+};
+
+class CallstackItem {
+	previous: CallstackListItem;
+	function: Function; //le type est défini dans un autre fichier. 
+};
+
+
+
+
+
+
+
+
+
+===========================
+===========================
+
+
+static class source {
+	
+	main: Function;
+	
+};
+
+class Function {
+	parameters: VariableList;
+	
+	body: StatementList;
+};
+
+
+class VariableList {
+	first: VariableListItem;
+};
+
+class VariableListItem {
+	variable: Variable;
+	next: VariableListItem;
+};
+
+class Variable {
+	value: @memory;
+};
+
+
+
+
+class ExpressionList {
+	first: ExpressionListItem;
+};
+
+class ExpressionListItem {
+	expression: Expression;
+	next: ExpressionListItem;
+};
+
+//lorsqu'un fait le calcul d'une expression, on récupère inévitablement un @memory.
+union Expression [
+	ExpressionVariable;
+	ExpressionConst;
+	ExpressionMath;
+];
+
+//expression qui vaut la valeur d'une variable
+class ExpressionVariable {
+	variable: Variable;
+};
+
+class ExpressionConst {
+	value: @memory;
+};
+
+
+union ExpressionMath [
+	ExpressionMathOpperation;
+];
+
+union ExpressionMathOpperation [
+	ExpressionMathAdd;
+	ExpressionMathSub;
+	ExpressionMathMul;
+	ExpressionMathDiv;
+] {
+	left: Expression;
+	right: Expression;
+};
+
+
+class StatementList {
+	first: StatementListItem;
+};
+
+union StatementListItem [
+	StatementAssign;
+	StatementCall;
+] {
+	//mettre des attributs dans l'union signifie que toutes
+	//les classes qui sont unies ont ces attributs. 
+	next: StatementListItem;
+};
+
+//statement pour assigner une valeur dans une variable. 
+class StatementAssign {
+	variable: Variable;
+	value: Expression;
+};
+
+//statement pour appeler une méthode 
+class StatementCall {
+	function: Function;
+	parameters: ExpressionList; //liste des valeurs des paramètres.
+};
+
+===========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
