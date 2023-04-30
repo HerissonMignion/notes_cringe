@@ -100,7 +100,7 @@ symboles terminaux pour représenter les données en mémoire.
 
 
 
-
+Au lieu de faire plusieurs langages custom, je peux plutôt en faire un framework javascript où y'a 3 types de fichiers, et dans chaque fichiers on utilise des appels de méthodes (de façon similaire à ntro ou à des frameworks de tests unitaires) provenant d'un framework que je vais créer pour contruire en mémoire les structures représentés par les 2 langages que j'ai commencé à développer. 
 
 
 

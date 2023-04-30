@@ -1,0 +1,59 @@
+
+
+
+// TODO: il faudrait faire l'effort de s'assurer que je n'ai pas fait d'erreur : les tester ces algos.
+
+
+// https://en.wikipedia.org/wiki/Insertion_sort
+public static void insertionSort(List<int> old, List<int> ans) {
+	ans.clear();
+	
+	foreach (int item in old) {
+		int i;
+		for (i = 0; i < ans.length; i++) {
+			if (item < ans[i]) {
+				break;
+			}
+		}
+		
+		ans.insertAt(i, item);
+		
+	}
+	
+}
+
+
+//transformation : maintenant, il parcourt la liste réponse en commençant par la fin
+
+public static void insertionSort2(List<int> old, List<int> ans) {
+	ans.clear();
+	
+	foreach (int item in old) {
+		int i;
+		for (i = ans.length; i > 0; i--) {
+			if (item >= ans[i]) {
+				break;
+			}
+		}
+		
+		ans.insertAt(i, item);
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

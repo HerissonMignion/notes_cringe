@@ -1,0 +1,460 @@
+
+
+
+
+Deux nombres sont jumeaux s'ils sont à 2 d'écart et qu'ils sont des nombres premiers. 
+
+Une personne est saoul si elle a bu de l'alcool dans les dernières heures. 
+
+
+Un stack (programmation) est vide si l'opération de retrait a été faite autant de fois que l'opération d'ajout. 
+Un stack, dont l'opération de retrait a été faite autant de fois que l'opération d'ajout, est vide.
+
+
+Un arbre enraciné (programmation) est un objet qui peut contenir une valeur et qui peut contenir 0 ou plusieurs autres arbres.
+Un arbre enraciné est cyclique s'il y a un sous-arbre @A dont, en parcourant récursivement les sous-arbres, il est possible de tomber sur le noeud @A. 
+Un arbre enraciné est cyclique s'il y a un sous-arbre @A dont il est possible de tomber sur le noeud @A en parcourant récursivement les sous-arbres. 
+
+// répond au concepte appellé "cyclique"
+un arbre enraciné est cyclique
+where {
+	il y a un sous-arbre @A
+	where {
+		en parcourant récursivement tout les sous-arbres, on tombe sur @A;
+		// un 3e where?
+	};
+};
+
+// https://fr.wikipedia.org/wiki/Arbre_(th%C3%A9orie_des_graphes)
+
+
+
+Une méthode @A est récursive s'il y a une sous instruction qui appelle la méthode @A.
+
+Une méthode @A est récursive
+where {
+	en parcourant récursivement toutes les sous-instructions, on tombe sur au moins une instruction qui appelle @A;
+	// un 2e where?
+};
+
+
+
+
+Si on veut faire des conditions AND, on accumule les where:
+
+ASDF ASIDF AIJF ARE 
+where {
+	ajsfiareigur;
+}
+where {
+	agbire gerhg air huiagr;
+}
+where {
+	ajgiuare iuareguir;
+};
+
+
+Si on veut faire des confitions OR, on les accumule dans le même where:
+ASDFA RIGAHEUR GR
+where {
+	fnaihfuairhgi r ga gurih giarhguiarhg;
+	argier giauhrguiar;
+	arghier;
+	ueghierhgiuar gru hguirhgia rgrrgr;
+};
+
+
+
+
+
+
+@MAX est une fonction
+where {
+	est une fonction;
+}
+where {
+	prend en paramètre une liste @L;
+}
+where {
+	@L n'est pas vide;
+}
+where {
+	retourne une valeur @REP;
+}
+where {
+	@REP est contenu dans @L;
+	il y a au moins un élément @V de @L
+	where {
+		@V == @REP;
+	};
+}
+where {
+	//il faut plus ou moins le concepte de liste, à même la syntaxe du langage?
+	//ou est-ce que c'est un concepte fondamentale qu'une chose peut contenir d'autres choses?
+	pour toute valeur @V contenu dans @L
+	where {
+		@V <= @REP;
+	};
+};
+
+
+
+
+
+Lorsqu'on programme, nous implémentons un concepte en utilisant d'autres conceptes. C'est parce que d'autres conceptes ont des propriétés émergeantes intéressantes pour programmer/implémenter. Je pense donc que l'expression d'un concepte exprimme suffisament les propriétés émergeante pour qu'un algorithme ayant pour tâche d'écrire un (algorithme répondant à une description de tâche/concepte) puisse utiliser d'autres conceptes déjà existant, ces autres conceptes étant fournis seulement par leur description et non par du code. Ça fait juste plus ou moins confirmer qu'un concepte = propriétés émergeante?
+
+
+J'arrive dans un environnement/langage de programmation qui est nouveau pour moi. Je souhaite écrire un algorithme pour faire une tâche donnée. Je réfléchis à comment programmer mon algorithme, et je me dis que avec une liste je peux faire un traitement "de tel façon" et que ça va marcher. Même si je ne sais pas comment utiliser une liste dans ce langage (parce que je sais que les listes sont déjà programmées), je peux quand même planifier un algorithme parce que je réfléchit au déplacement de l'information en utilisant les propriétés émergeantes d'une liste au sein de l'algorithme. Est-ce que "propriété émergeante" == une caractéristique de déplacement d'information pouvant être utilisée pour l'écriture/rédaction/implémentation d'un algorithme de déplacement d'information plus complexe? Est-ce qu'un concepte c'est une collection d'une ou plusieurs propriétés émergeantes? (Dans l'immédiat, cela me semble bizarre si je considère qu'une propriété émergeante est peut-être un concepte. Il me semble qu'une propriété émergeante peut être bien plus que juste "une caractéristique de déplacement d'information", non? Mais peut-être bien qu'un concepte != propriétés émergeantes, mais c'est quand même assez proche.) 
+
+
+
+Ainsi, pour décrire le concepte d'une liste, d'un stack ou d'une queue, je décris les prorpiétés émergeante du déplacement de l'information quand l'objet est utilisé.
+
+
+
+
+//concepte de signal de smaltalk?
+
+Est une queue quand les éléments qu'il contient sont retirés dans la même séquence qu'ils ont été insérés. Il est impossible de retirer plus d'élément qu'il en a été ajouté.
+
+// "il en a été", avec le verbe "été" au participe présent, ça indique le passé dans la séquence d'opérations faite. 
+
+@Queue
+where {
+	Les éléments sont récupérés dans la même séquence qu'ils ont étés insérés;
+}
+where {
+	On (l'user) ne peut pas retirer plus d'élément qu'il en a été inséré.
+};
+// concepte de quantité
+
+//on peut utiliser des conceptes pour d'écrire d'autres conceptes.
+
+//une liste maintient une séquence. sert à préparer une séquence.
+
+
+
+Il me semble que j'utilise souvant les signaux d'insérer/ajouter et de retirer. Quand on délègue de l'information en déplaçant l'information vers quelqu'un/quelque chose d'autre:
+	Quand quelque chose d'autre en reçoit la responsabilité, c'est qu'on a ajouté/inséré.
+	Quand quelque chose n'en a plus la responsabilité, c'est qu'on a retiré/supprimé. 
+
+
+
+
+Il existe deux types de conceptes? Conceptes d'états (classes, objets) et conceptes d'actions (méthodes/fonctions)?
+Les signaux d'une action sont les noms des paramètres? Les signaux d'un état (instance d'objet) sont les attributs? 
+
+Il me semble que "ajouter"/"insérer" et "retirer" ça parle de la présence d'une information ou non dans un objet/état.
+
+Ça commence à me faire pense à c/c++ et la gestion de la mémoire. Comment programmons-nous en c/c++ et sachons que, réellement, notre code n'a pas de fuites de mémoires? Il nous faut prendre en considération tout le déplacement des objets à travers la mémoire, ainsi que 
+
+Il me semble qu'on devrait peut-être pouvoir indiquer l'extérieur avec l'équivalent du pronom impersonnel (l'impersonnel/l'extérieur dans "On (l'user) ne peut pas retirer plus d'élément qu'il en a été inséré.").
+
+Il n'y a pas seulement des conceptes de déplacement d'information comme des listes ou des stack, il y a également des conceptes de transformation de l'information comme des opérations mathématiques ou des gros calculs.
+
+
+
+
+
+================[ un concepte ]================
+
+@Queue
+where {
+	Les éléments sont récupérés dans la même séquence qu'ils ont étés insérés;
+}
+where {
+	On (l'user) ne peut pas retirer plus d'élément qu'il en a été inséré;
+}
+where {
+	Des éléments peuvent êtres insérés sans que tout les éléments aient étés retirés;
+};
+
+
+
+================[ son implémentation ]================
+
+class Queue {
+	
+	first = new QueteItem(null);
+	
+	public add(value) {
+		this.addRecursive(this.first, value);
+	}
+	
+	private addRecursive(item, value) {
+		if (item.next == null) {
+			item.next = new QueueItem(value);
+		}
+		else {
+			this.addRecursive(item.next, value);
+		}
+	}
+	
+	public pop() {
+		const item = this.first;
+		const value = item.value;
+		this.first = item.next;
+		delete item;
+		return value;
+	}
+	
+}
+
+class QueueItem {
+	value = null;
+	next = null;
+	public QueueItem(value) {
+		this.value = null;
+	}
+}
+
+================[ analyse ]================
+
+Il ne s'agit pas seulement de faire un programme avec des propriétés émergeantes correspondant à la description du concepte. Il s'agit de faire un outil pour l'utilisateur/le programmeur. Dans la description du concepte, on spécifie l'interface (les méthodes) que le programmeur peut appeler, ainsi que les paramètres des méthodes. 
+
+Ainsi, les points d'entrés de l'interface (pour que l'user puisse utiliser l'objet, parce que les propriétés émergeantes sont décrites selon le point de vue de l'utilisation) sont défini dans le concepte et, selon l'environnement/langage de destination, il faut programmer le concepte de sorte à ce qu'il soit utilisable par un user/programmeur. 
+
+Puisqu'il faut spécifier la façon qu'on interragit avec une instance du concepte (on utilise un concepte pour profiter de ses propriétés émergeantes), alors pour faire un langage, il serait peut-être utile de faire en sorte que les points d'entrés sont explicitement déclaré, contrairement à mon exemple écrit en français. 
+
+Il y a des conceptes où des actions sont disponibles seulement sous certaines conditions. Par exemple : une liste qui a une fonction pour calculer la moyenne de tout les nombres qu'elle contient. Naturellement, si nous ajoutons des chaine de textes à la liste, elle ne peut plus calculer la moyenne (on peut argumenter qu'elle peut quand même ignorer les entités qui ne sont pas des nombres, mais cet exemple illustre qu'il y a des demandes de propriétés émergeantes qui ne se peuvent seulement sous certaines conditions). ALORS, dans un langage pour définir les conceptes, il faut également la possibilité de "désactiver" l'utilisation de certaines fonctionnalités dans certaines conditions. 
+
+
+Je pense qu'il faut relier ce travail avec mon travail déjà accomplit sur la traduction de code d'un environnement à un autre. Parce que pourquoi ne pas automatiquement programmer un concepte dans tout les langages possible!
+
+Pour générer des choses utilisable dans un environnement, il faut connaitre quel est l'environnement/langage/système de destination. C'est dans le langage de destination qu'il faut identifier quelle sont la façon "pratique" de faire du code réutilisable par les futurs programmeurs. En java par exemple, on peut faire des classes ou des classes statiques avec des méthodes statiques. Alors quand on cherche à programmer un concepte, on va cibler les classes ou les classes statiques avec des méthodes statiques (utilitaires)?. Ensuite on regarde le comportement des instructions de bases pour produire un déplacement d'information qui correspond aux propriétés émergeantes indiquées. Le choix des instructions, afin de produire la propriété émergeante, est effectué en passant à travers le code de l'interpréteur, à travers la représentation objectifiée en arbre en mémoire, à travers le bnf qui traduit la représentation objectifiée en mémoire vers les contraintes de la représentation textuelle finale. 
+
+
+
+
+================================
+
+
+
+
+
+@Queue
+where {
+	Les éléments sont récupérés dans la même séquence qu'ils ont étés insérés;
+}
+where {
+	On (l'user) ne peut pas retirer plus d'élément qu'il en a été inséré;
+}
+where {
+	Des éléments peuvent êtres insérés sans que tout les éléments aient étés retirés;
+};
+
+Il me faut maintenant clarifier comment expliquer/décrire de façon statique le concepte/l'organisation d'un déplacement d'informations dans la description d'un concepte. Il faut que ce soit assez clair pour qu'un algorithme puisse utiliser cela, et analyser comment implémenter cela dans un environnement/langage/système. 
+
+
+Puisque les actions que nous pouvons effectuer sur le concepte sont importantes, il est probable qu'un bon langage pour décrire un concepte rassemblerait tout ces verbes au même endroit.
+
+@Queue {
+	verbs {
+		add {
+			// ???
+		};
+		withdraw {
+			// ???
+		};
+		
+	};
+	// ...
+};
+
+Il y a aussi des actions qui sont conditionnels. Parfois ces conditions sont naturelles, parfois c'est artificiel. Je vais faire un exemple avec une condition artificiel. Un peu comme les profs qui mettent des consignes stupides à programmer. 
+
+Par exemple, la queue peut calculer la moyenne des nombres qu'elle contient seulement s'il y en a au moins 5.
+
+
+@Queue {
+	verbs { //on lui demande de programmer une classe utilitaier. il faut donc qu'elle soit utilisable par quelqu'un (un futur programmeur). Il faut donc un peu indiquer qu'elles sont les façons qu'on souhaite communiquer des choses à l'objet que l'algorithme va programmer. 
+		add {
+			// ???
+		};
+		withdraw {
+			// ???
+		};
+		
+		//condition truc binouche
+		if quandtité >= 5 {
+			calculer_moyenne {
+				// ???
+			};
+		};
+		
+	};
+	// ...
+};
+
+// Directed Acyclic Graph?
+
+J'ai l'impression que je commence à ressentir l'émergeance de la structure d'un directed acyclic graph, whatever. 
+
+Comment clarifier le concepte de Séquence de sorte à pouvoir s'en servire dans le langage de description de concepte ET que ce soit utilisable pour décrire concrètement le déplacement de l'information/dans quel ordre des choses sont faites.
+
+
+Exemple de concepte :
+"""
+Une méthode qui reçoit un objet O de type X. La méthode appelle/fait des choses dans cette séquence : {
+	appeler la méthode "asdf" de O avec les paramètres (5, 6);
+	appeler la méthode "qwer" de O avec les paramètres (1);
+}.
+"""
+
+Ainsi, il semble possible d'utiliser le concepte de séquence pour indiquer explicitement dans quel ordre certaines choses doivent êtres faites. 
+
+
+
+
+
+il pourrait être utile de pouvoir définir, un peu comme des variables locales, des noeuds (dans le possible directed acyclic graph) afin de s'en servir à plusieurs reprises.
+
+
+@Queue {
+	Sequence @seq;
+} {
+	verbs {
+		add @seq? {
+			// ???
+		};
+		withdraw @seq? {
+			// ???
+		};
+		
+	};
+	// ...
+};
+
+
+Je pense de plus en plus que s'inspirer de la gestion de la mémoire en c/c++/rust/autres est une bonne inspiration des choses que je dois développer pour déterminer comment indiquer des déplacements d'informations. Par exemple, comme quand des fonctions en c indiquent que l'utilisateur de la fonction doit libérer lui-même le pointer retourné par la fonction quand le pointer ne sera plus nécessaire. Je pense que c'est étroitement en lien avec ce que j'essaye d'accomplir. 
+
+Quand on parle du concepte d'une queue et qu'on explique comment fonctionnent les méthode add et withdraw/pop/takeOne/fasdfds, la queue est une encapsulation dont nous n'expliquons pas (ou le moins possible) comment ça fonctionne à l'intérieur (de toute façon, c'est la job de l'algorithme de programmer l'intérieur de l'objet). Nous devons tout de même parler de ce que les méthodes/fonctions/actions reçoivent en paramètre et ce qu'elles retournent. Il faut parler de ce que retourne la fonction withdraw à travers tout les appels aux méthodes/fonctions/actions add et withdraw.
+
+Ce n'est pas tout les conceptes qui stockent/conservent les objets quand on appelle leurs méthodes. Il n'est donc pas automatique qu'un objet soit concervé à l'intérieur de la classe. Il faut donc spécifier explicitement quand quelque chose est conservé à l'intérieur. 
+
+
+@Queue {
+	Sequence @seq;
+} {
+	verbs {
+		void add(un objet @o) {
+			on se rappele dans la séquence @seq que @o a été appelé;
+			on y sauvegarde également @o lui-même;
+		};
+		function withdraw() {
+			retourne l'objet au début de la séquence @seq;
+			on oublie l'objet au début de la séquence @seq;
+		};
+		
+	};
+	// ...
+};
+Je n'aime pas l'exemple précédant, parce que c'est borderline si je suis en train de programmer le concepte. Je réessaye.
+
+@Queue {
+	Sequence @seq {
+		on mémorise, dans la même séquence que les appels à add, les objets @o avec lequel la méthode add a été appelée avec;
+		à chaque appel à withdraw, withdraw retourne un objet de la séquence. l'appel suivant à withdraw, withdraw retournera l'objet suivant, etc. 
+	};
+} {
+	verbs {
+		void add(un objet @o) {
+			
+		};
+		function withdraw() {
+			
+		};
+		
+	};
+	// ...
+};
+
+
+Est-ce que, pour la méthode withdraw, il y a un concepte intrinsecte de "position actuelle" dans la séquence?
+
+Pour définir le concepte, je n'ai pas besoin de spécifier qu'il devra utiliser des classes utilitaire (comme des liste ou tableaux ou autres) ou qu'il devra faire une classe utilitaire (comme QueueItem par exemple), l'algorithme va le déterminer tout seul.
+
+Dans le cas où il fait une classe utilitaire, s'il programme en c/c++, il doit également gérer la mémoire, libérer les objets utilitaires (ex: QueueItem) quand ils ne sont plus nécessaire.
+
+
+Le concepte d'une queue est focusé sur la séquence avec laquelle les objets sont ajouté à la queue. Je préfère mon 2e exemple (précédant) au premier. Justement, dans le 2e exemple, j'ai tout rassemblé dans le morceau de séquence. 
+
+@Queue {
+	Sequence @seq {
+		
+		La queue sert à mémoriser des objets avec un ordre séquentiel entre eux.
+		
+		La séquence que la queue sert à mémoriser est construite de façon continue dans le temps, un objet à la fois est ajouté.
+		
+		L'ordre des objets mémorisé est récupéré en récupérant un 
+		
+		
+		Il y a 2 séquences en jeu: Première séquence : du code, ça s'exécute dans le temps. Une instruction à la fois. Deuxième séquence : la séquence que la queue sert à mémoriser. Ultimement, toutes les lignes de codes écrites font du sens/fonctionnent parce qu'elles sont exécutées dans un ordre particulié, dans une séquence, de la première ligne jusqu'à la dernière ligne. C'est un espèce de point de référence? 
+		
+		
+		on mémorise, dans la même séquence que les appels à add, les objets @o avec lequel la méthode add a été appelée avec;
+		à chaque appel à withdraw, withdraw retourne un objet de la séquence. l'appel suivant à withdraw, withdraw retournera l'objet suivant, etc. 
+	};
+} {
+	verbs {
+		void add(un objet @o) {
+			
+		};
+		function withdraw() {
+			
+		};
+		
+	};
+	// ...
+};
+
+
+
+Je viens de réaliser que je suis peut-être (ou non, finalement?) en train de mélanger implémentation et concepte. 
+
+Il faut bien faire la différence entre définir le concepte d'une queue (qu'on peut lui ajouter des objets à la fin et y retirer des objets au début) VS comment l'implémenter (une classe avec des méthodes/fonctions). Bien que ultimement, dans la pluparts des langages de programmation, les actions sont implémentés comme des méthodes/fonctions, il ne faut pas assumer cela dans l'explication d'un concepte. On peut toute fois utiliser une représentation similaire à une signature de méthode dans l'explication d'un concepte.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

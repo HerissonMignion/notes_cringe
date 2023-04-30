@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+
+
+
+
+function sqrt(x) {
+	@initialization: {
+		let rep = 1;
+	}
+	
+	@body: {
+		@loop: {
+			for (let i = 0; i < 20; i++) {
+				@iteration: {
+					rep = (rep + (x / rep)) / 2;
+				}
+			}
+		}
+	}
+	
+	@end: {
+		return rep;
+	}
+	
+}
+
+
+
+
+function sqrt_log extends sqrt {
+	
+	#body: {
+		#loop: {
+			#iteration: {
+				#:; //une syntaxe pour dire de mettre le code de la méthode parente ici (seulement dans @iteration)
+				console.log(rep);
+			}
+		}
+	}
+	
+	#end: {
+		console.log(rep);
+		#:;
+	}
+	
+}
+
+//ou:
+
+function sqrt_log extends sqrt {
+	
+	#body.loop.iteration: {
+		#:; //une syntaxe pour dire de mettre le code de la méthode parente ici (seulement dans @iteration)
+		console.log(rep);
+	}
+	
+	#end: {
+		console.log(rep);
+		#:;
+	}
+	
+}
+
+
+
+function sqrt_slow extends sqrt {
+	
+	#body.loop: {
+		for (let i = 0; i < 1000; i++) {
+			#iteration:;
+		}
+	}
+	
+}
+
+
+function sqrt_fast extends sqrt {
+	#initialization: {
+		let rep = x / 2;
+	}
+	
+	#body.loop: {
+		for (let i = 0; i < 5; i++) {
+			#iteration:;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

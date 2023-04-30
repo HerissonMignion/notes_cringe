@@ -1,0 +1,161 @@
+
+
+
+Je continue de réfléchir à comment les tests unitaires décrivent les fonctions qu'ils testent.
+
+propriété émergeante ?= concepte ?= "décrit" par les tests unitaires.
+
+
+Je continue de penser que les tests unitaires sont des mises en situations dont (on peut dire que) une fonction/méthode implémente correctement le concepte/la propriété émergeante si elle se comporte correctement à travers toutes les mises en situations que sont les tests unitaires.
+
+Il manque cependant de l'informations aux tests unitaires habituels (en tout cas, tels que je les connais).
+
+
+
+J'ai une intuition en ce moment: Le langage qu'il faut pour décrire le concepte/les propriétés émergeantes d'une fonction/méthode, c'est comme si c'était rien qu'une seule mise en situation, mais avec tout les liens logiques qui fait en sorte qu'elle s'adapte à toutes les situations où la fonction/méthode sera utilisée. Ça décrit tout les expect (dans un tests unitaire, les assertions `assertEquals(4, returnsFour())` `expect(4, returnsFour())`);
+
+
+Exemple en français:
+"""
+Racine carrée de Y :
+Retourne un nombre X tel que (
+	You can expect that (X * X) == Y;
+	
+)
+"""
+
+
+J'ai l'intuition que ajouter l'expect m'apporte sur la bonne voie.
+
+
+On peut même utiliser d'autres conceptes.
+Par exemple, une fonction qui fonctionne seulement si le 2e paramètres est plus petit que la racine carrée de 10:
+"""
+Retourne X+1 si Y plus petit que racine carrée de 10:
+Return un nombre Y tel que (
+	You can expect that (
+		(si Y < racine carrée de (10))
+		?
+			Y == X + 1
+		:
+			Y == X;
+	)
+)
+
+"""
+
+
+
+
+
+Mettre une liste en ordre:
+"""
+Mettre en ordre la liste l:
+Affecte la liste l tel que (
+	You can expect that (
+		Pour chaque élément n ayant un élément suivant m : (
+			n <= m;
+		)
+	);
+)
+
+"""
+
+
+Ajouter un élément dans une liste :
+"""
+Ajouter un élément "e" à la fin de la liste "l":
+Affecte la liste l tel que (
+	You can expect that (
+		la liste l augente de 1 élément;
+		l.getLastItem() == e;
+		Tout les éléments qui étaient déjà présent sont restés aux mêmes indexes. 
+	)
+)
+
+"""
+
+
+
+
+
+
+
+
+liste {
+
+Une liste est un objet auquel on peut lui ajouter et lui retirer des éléments qui proviennent d'ailleurs. La liste conserve un ordre naturel (à une (1) dimension) entre les éléments qu'elle contient.
+
+//À noter que cette façon de parler n'oblige pas que "la façon d'ajouter et de retirer des éléments" soit des méthode. Ça pourrait être une propriété dont le setter fait l'action de réaranger l'intérieur de l'objet. En tout cas, je pense que c'est bien si la description des conceptes n'oblige pas à les implémenter d'une façon particulière. Bien sûr qu'à la fin de la journée, ce sera des méthodes (dans les languages de prog habituel).
+
+//Je remarque également que dans les deux premières pharses, on décrit des choses qu'on peut faire à la liste et des choses que la liste fait. Est-ce qu'on peut faire des choses à quelque chose d'autre? C'est pas plutôt la liste qui fait tout, et nous lui demandons de faire quelque chose à la volé? Dans ce cas, les deux premières phrases sont des descriptions de ce que la liste fait/peut faire. 
+
+//Si je décrit le concepte d'une liste chainée, là je me rapproche d'une implémentation, mais je pense que ce serait le même langage qui décrirait le concepte d'une liste chainée ou d'une array list. Alors est-ce que la seule différence entre le concepte abstrait d'une liste est les concepte d'une liste chainée ou d'array list sont le niveau de précisions?
+
+
+
+
+}
+
+
+
+
+
+=================
+
+
+Concept Liste {
+	// ...
+}
+
+Concept Liste chainée {
+	est une Liste
+	Where ...
+	Where ...
+}
+
+Concept Array list {
+	est une Liste
+	Where ...
+	Where ...
+}
+
+
+
+=================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

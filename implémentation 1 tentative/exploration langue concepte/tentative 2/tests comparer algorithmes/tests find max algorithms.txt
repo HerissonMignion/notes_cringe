@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+
+public static int max(List<int> list) {
+	
+	int rep = list[0];
+	for (int i = 1; i < list.length; i++) {
+		if (rep < list[i]) {
+			rep = list[i];
+		}
+	};
+	
+	return rep;
+}
+
+
+
+
+public static int max2(List<int> list) {
+	
+	return max2(list, 0);;
+	
+}
+
+public static int max2(List<int> list, int index) {
+	
+	return if (index >= list.length - 1) (
+		list[index];
+	) else (
+		int sub = max2(list, index + 1);
+		if (sub > list[index]) (
+			sub;
+		) else (
+			list[index];
+		);
+	);;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

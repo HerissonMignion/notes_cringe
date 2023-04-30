@@ -1,0 +1,122 @@
+Puisque je semble avoir un peu de difficulté à imaginer ce qu'il faut à un langage pour exprimmer les conceptes, propriétés émergeantes, "décrit" par les tests unitaires, je peux essayer de procéder à l'envers et trouver quelles informations sont nécessaires dans un tel langage en y allant par les implémentations et en continuant d'essayer de réunir ensemble plein d'implémentations différentes pour en extraire les points en commun qui seraient enfin ce que je cherche à exprimmer.
+
+(Ex: une méthode pour trouver le maximum d'une liste, ou ordonner une liste)
+Dans une méthode implémenté, quand le programmeur écrivait la méthode, il avait un raisonnement logique en tête qui faisait en sorte qu'il savait que le code qu'il écrit fonctionne/allait fonctionner.
+
+
+Se concentrer sur le concepte de séquence.
+
+```
+//je ressent quelque chose de spécial pour ce mot?
+une séquence {
+	
+	quand certaines choses sont "plus grande" ou "après" d'autres, et donc que les autres choses sont "plus petite" ou "avant" elles.
+	
+}
+```
+
+
+
+
+
+Quand j'ai une liste de nombre et que je souhaite trouver le nombre le plus grand, il y a plusieurs idées qui me viennent en tête :
+	- (contrainte parce que nous sommes un programme) On ne peut vérifier qu'une seule chose à la fois.
+	- Nous allons vérifier un nombre à la fois.
+	- Étant donné la nature de la tâche à résoudre, l'ordre dans lequel nous vérifions les nombres n'est pas important.
+	- Il y a une chose logique, un truc en lien avec la compréhension, qui fait en sorte qu'on comprend pourquoi nous pouvons vérifier les nombres dans n'importe quel ordre. 
+	- Je sais que le tableau/liste d'entré est une collection/ensemble de nombres, dont un nombre peut se trouver une ou plusieurs fois. 
+	- Un nombre, c'est comme une instance de classe?
+	- 
+
+
+
+
+
+Pour programmer, quelqu'un a besoin de savoir les choses suivantes :
+	- Quels sont les instructions à sa disposition (l'environnement, les instructions de bases).
+	
+
+Pour programmr un algo qui trouve le maximum d'une liste, il faut en plus savoir les choses suivantes :
+	- Comment notre algo aura accès aux nombres qu'il doit examiner.
+	- Comment notre algo devra faire sortir sa réponse.
+	- Juste dire "fait un algo qui trouve le maximum" implique déjà le concepte de plus grand, plus petit. 
+	- Je sais que j'ai, en entré du problème, plusieurs nombres.
+	- Parce que je sais que mon programme fera une instruction à la fois, j'ai une intuition que je vais avoir besoin d'au moins une variable pour mémoriser de l'information ou un candidat de réponse. 
+
+
+
+Les données d'entrées pourait être un tableau contenu en mémoire et qui contient tout les nombres. Ensuite on donne ce tableau à l'algorithme qui va parcourir tout les nombres à l'intérieur et déposer sa réponse quelque part.
+Les données d'entrées pourait aussi être sur un serveur web où on peut accéder à une seule case du tableau à la fois avec des requête http get comme "http://www.server.ca/get/0" pour récupérer en ascii le string du nombre contenu dans la case à l'index 0. L'algo peut également récupérer la quantité de case existante avec "http://www.server.ca/length". L'algo fait donc une requête http get pour chaque case du tableau. 
+Peut importe le chemin qu'il faut emprunter pour accéder à l'information d'entrée et le chemin qu'il faut emprunter pour aller déposer l'information de sortie, l'algorithme reste majoritairement le même. Le chemin qu'il faut emprunté pour aller chercher ou déposer de l'information, dans la situation basique ici, me semble surtout être des instructions supplémentaire en périphérie de l'algorithme. J'ai cependant de la facilité à imaginer que pour des algorithmes un peu plus compliqués, comme des trucs qui niaisent dans des arbres, la façon/chemin pour accéder à l'information est un peu moins des instructions en extra en périphérie d'un algorithme et peut carrément obliger l'algorithme à fonctionner différement. 
+
+
+
+
+Ce qui fait en sorte qu'une implémentation est différente d'une autre implémentation, ce n'est pas le chemin qu'une implémentation doit emprunter pour aller chercher/déposer de l'information, c'est le traitement logique fondamentale qui est la raison pourquoi l'implémentation fonctionne. (Il se peut que dans certaines situations, la représentation des données/chemin à emprunter pour accéder à l'information affecte un peu les algorithmes passant à travers.)
+
+Donc, on revient au point de départ, la chose que toutes les implémentations ont en commun, c'est la tâche qu'ils font.
+
+Ça me fait penser :
+~"Une machine de turing est une machine qui peut accomplir n'importe quel tâche (virtuelle), pour autant que tu lui laisse assez de temps et de mémoire (et que tu la programme)".
+
+Comment défini-t-on une tâche? Parce que une tâche n'a pas besoin d'être physique, elle peut être virtuelle. Je commence à ressentir qu'il faudrait une façon de définir/décrire un tâche virtuel/virtuellement? C'était obvious depuis le début mais c'est des nouveaux mots et une nouvelle perspective. 
+
+Si je programme une implémentation pour trier les éléments d'une liste, et que j'explique la logique de l'implémentation à quelqu'un, normalement il devrait un moment donné avoir une ampoule qui allume et comprendre pourquoi ça fonctionne, mon implémentation. On pourrait peut-être lancer des mathématiques et parvenir à prouver que, vraiment, l'implémentation fonctionne pour faire la tâche désiré, et cela sans bug (possiblement). Donc, peut importe l'implémentation, la raison pourquoi une implémentation fonctionne est qu'il y a une certaine logique qui justifie les instructions qui la compose. Il est possible de prouver que cette logique fonctionne pour faire le traitement d'information désiré (concepte). Les implémentations font tous la même chose, et il est possible de prouver qu'elle font cette chose. ALORS TROUVER C'EST QUOI QUI EST PROUVÉ.
+
+POUR ENFIN TROUVER C'EST QUOI L'INFORMATION MINIMUM NÉCESSAIRE POUR DÉCRIRE LE CONCEPTE ACCOMPLIT PAR UNE MÉTHODE : Faire plusieurs implémentations d'un même concepte (ex: faire plusieurs fois un algo de recherche du maximum. une version peut d'abord ordonner le tableau et ensuite récupérer le maximum. ex: faire plusieurs fois un algo de triage d'un tableau). Ensuite, trouver comment prouver que ces différentes implémentations réussissent tous à faire la tâche qu'elles font. 
+
+
+
+
+
+Un environnement/langage/système n'est pas seulement des instructions de bases, c'est également des instances/la mémoire dans laquelle les instructions travaillent. "Un algorithme qui trouve le maximum d'un ensemble de nombre" est un concepte d'algorithme à faire. Implémenter un algorithme c'est à la fois choisir les représentations des données ainsi que les instructions qui travaillerons sur ces représentations. Dans la plupart des langages, il y a des nombres, des tableaux ou des listes qui sont des types de bases déjà existant. Si le langage n'a pas de tableau, mais a les classe, alors on pourait implémenter le concepte de liste chainée et implémenter l'algorithme pour qu'il passe à travers la liste chainée. 
+
+
+
+
+
+
+
+observateur d'une chose non encore comprise.
+J'ai en face de moi dans une pièce un portail avec un bouton attaché au portail, et le portail a des prorpiétés spéciales. Par exemple, quand on met un objet dans le portail, l'objet disparait de l'univers. On peut mettre d'autres objets dans le portail et ces nouveaux objets vont disparaître eux aussi. Quand on appuis sur le bouton, le dernier objet à avoir été absorbé par le portail va réaparaître en sortant du portail et tombant à terre dans la pièce en face de moi. Si j'appuis à nouveau sur le bouton, c'est maintenant l'objet précédant ayant été rentré qui va ressortir du portail et tombé par terre en face de moi. Je ne comprend pas comment implémenter une telle chose, un tel portait, en utilisant les lois physique de notre univers, en plaçant des atomes, mais je suis capable de comprendre comment il fonctionne et d'expliquer son fonctionnement à quelqu'un d'autres. Je suis en train de décrire le concepte d'un objet sans implémenter cet objet. On peut reproduire ce type de discours pour des classes et des méthodes/fonctions en programmation?!
+
+
+
+ajouter implements et/ou extends aux méthodes/fonctions.
+J'ai déjà fait une petite classe utilitaire de fonctions statiques pour faire des calculs/oppérations mathématiques avec une quantité variable de décimales après la virgule, une précision variable/arbitraire. Par exemple j'ai calculer pi avec 1000 décimales après la virgule. Quand j'ai fait ces fonctions, je mettais encore des printf à l'intérieur des méthodes de calcul parce que je voulais savoir c'est quoi qui se passait dans l'algorithme, voir où en était rendû mon programme. Y'a certaines méthode que j'avais dupliqué (ex: "SquareRoot" en "SquareRootPrintf") pour avoir des printf de où il est rendû. J'airais pu ajouter un paramètre "bool doPrintf = false" dont sa valeur par défaut est false, ce qui en fait un paramètre optionnel, mais il me semble qu'on devrait pouvoir déclarer une méthode dont le code est le même qu'une autre méthode, mais qui fait juste ajouter une instruction à l'intérieur, à un endroit particulier. Cela signifie qu'il faudrait pouvoir indiquer des "sections" à l'intérieur d'une méthode. Une méthode qui extends une autre méthode pourrait juste indiqué le nom d'une section et modifier les instructions à l'intérieur, pourrait ajouter des instructions avant ou après, sans avoir à réécrire tout la méthode au complet. 
+
+
+
+
+Un moment donnée je me disputais avec vincent, un ex à ma cousine, sur la question: Les produits qui sont gratuit seulement si tu achète un autre produit précis, sont-il réellement gratuit?". Il disait que non, ils ne sont pas gratuit. Moi je ne suis pas d'accord. On a débatu et on s'est fait des mises en situations "Si tel produit a un rabais de 50% si tu achète tel autre produit, alors ..., est-ce que pour toi c'est gratuit?". Et je répondais oui ou non si selon moi c'était gratuit. Un moment donné je me suis tanné, parce que ça faisait une dizaine de mises en situations que je répondais oui ou non. J'ai ~abstractifié les règles générales qui font en sorte que selon moi un produit est gratuit ou non. Les mises en situations c'est commes des tests unitaires et les règles générales que j'ai développées à la fin sont plus ou moins le langage que je cherche à déveloper. C'est plus ou moins comme si je définisais c'est quoi, pour moi, le concepte d'un produit qui est gratuit, non? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
